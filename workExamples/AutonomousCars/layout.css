@@ -1,0 +1,63 @@
+a {
+    color: darkblue;
+    font-family: didot;
+}
+
+body {
+    background-color: forestgreen;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-family: didot;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-family: didot;
+}
+
+div {
+    align-content: center;
+}
+
+p {
+    color: black;
+    font-weight: normal;
+    text-align: center;
+    font-size: 15px;
+    font-family: didot;
+}
+
+
+h4 {
+    color: black;
+    font-family: didot;
+    font-weight: normal;
+    width:100%;
+}
+
+.textContent{
+    float:left;
+    align-content: center;
+    width:40%;
+}
+.imageContent{
+    float:left;
+}
+#portrait {
+    margin:0px;
+    padding:0px;
+    width:15%;
+    float:left;
+    padding-right:220px;
+    
+}
+
+img{
+    max-width: 400px;
+}

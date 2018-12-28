@@ -1,0 +1,199 @@
+<head>
+<br>
+<br>
+<title>Party List</title>
+<style type="text/css">
+body {
+  text-align: center;  
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", "serif";
+  font-size: 110%;
+  margin: auto;
+}
+
+button {
+    background-color: white;
+    border: 1px solid grey;;
+    color: grey;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 20px;
+    cursor: pointer;
+    focus: outline:0;
+}
+
+button:focus {outline:0;}
+</style>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+
+</head>
+<body>
+<b> I'm Having a Party! </b> <br>
+<br>
+<br>
+If you would like to attend, please enter your information below. 
+<br>
+<br>
+Name: <input type = "text" id="name_Field" style=" " value=" ">  
+<br>
+School: <input type = "text" id="school_Field" style=" " value=" ">
+<br>
+Email: <input type = "text" id="email_Field" style=" " value=" ">
+<br>
+<br>
+<br>
+<text id = "statusLabel"></text>
+<br>
+<button id= "listButton" onClick= "showList();" > show list </button>
+<button id="nameButton" onClick="addName();" style=" ">Add a Name</button>
+<br>
+<br>
+<br>
+<center>
+<table border = 0>
+<tr>
+<td>
+<text id="listLabel"></text>
+</td>
+<td> &nbsp; &nbsp; 
+</td>
+<td>
+<text id="listLabel2"></text>
+</td>
+</tr>
+</table>
+</center>
+
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBit5nD0sAmFZcyZHiebDaVHx5yOIMiyMA",
+    authDomain: "party-list-6e2b2.firebaseapp.com",
+    databaseURL: "https://party-list-6e2b2.firebaseio.com",
+    storageBucket: "party-list-6e2b2.appspot.com",
+  };
+  firebase.initializeApp(config);
+  var partyFB = firebase.database();
+  var usersRef = partyFB.ref("/");
+
+var listButton = document.getElementById("listButton");
+var nameButton=document.getElementById("nameButton");
+var listLabel=document.getElementById("listLabel");
+var listLabel2=document.getElementById("listLabel2");
+var name_Field=document.getElementById("name_Field");
+var school_Field=document.getElementById("school_Field");
+var email_Field=document.getElementById("email_Field");
+var peopleList = "People in the Local List: <br> ";
+var peopleList2= " ";
+var personString = " ";
+var newName;
+var personObj;
+var newSchool;
+var newEmail;
+//var newStatus;
+var pName;
+var guestsRef = partyFB.ref("guests/");
+
+
+function addName() {
+newName = name_Field.value;
+newSchool = school_Field.value;
+newEmail = email_Field.value;
+//newStatus = status_Field.value;
+//add it locally, this will go away
+
+
+
+//add it to the DB, this will live forever
+var key = newName+newSchool;
+
+partyFB.ref("guests/"+key).set({ 
+
+   name: newName, 
+   school: newSchool,
+   email: newEmail,
+   status: "Invited",
+});
+
+}
+
+function changeStatus(changeString) {
+  
+
+          var newStatus = " ";
+          var splitArray=changeString.split("--") 
+          var key = splitArray[0];
+          var oldStatus = splitArray[1]; 
+          if (oldStatus == "Invited") {
+            newStatus = "Attending";
+          } else newStatus = "Invited";
+
+    statusLabel.innerHTML = "Change <b>"+ key + "</b> from <b>"+oldStatus+ "</b> to <b>" + newStatus+"</b>";
+
+  showList();   //show the updated list
+
+  partyFB.ref("guests/" + key).update({
+      status: newStatus
+  });
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  }
+
+
+
+
+
+function showList() {
+
+//do the local label  
+
+//now do the 2nd label
+      peopleList2 = "<b><left>These people are in the Database:</b><p>";
+          guestsRef.once("value", function(snapshot) { //get all record
+                snapshot.forEach(function(childSnapshot) {
+                    var key = childSnapshot.key; 
+                    personObj = childSnapshot.val();
+                    personString = "Name: " +personObj.name + "<br>"; //turn object into a string
+                    personString += "School: " +personObj.school+"<br>";
+                    personString += "Email: " +personObj.email+"<br>";
+                    var changeRequest = key + "--"+personObj.status;
+                    personString += "<input type='checkbox' onclick='changeStatus(\""+changeRequest+"\");' >";
+                    //personString += "<input type = 'checkBox' onClick= 'changeStatus(\""+key+"\")';>";
+                    personString += "Status: " +personObj.status+"<br>"; 
+                    peopleList2 += personString; 
+                    peopleList2 += "<br>"; 
+                });
+                peopleList2 += "</left>"; 
+                listLabel2.innerHTML=peopleList2;
+
+          });
+
+         
+
+}
+
+
+
+
+
+
+</script>
+</body>
+
+

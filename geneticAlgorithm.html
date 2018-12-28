@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<ul class="navBar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+
+</ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Genetic Algorithm</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+<h1>Genetic Algorithm of Hue Grids</h1>
+
+<body>
+    <div class="genAWrapper">
+        <div class="GAProjImage">
+            <img src="workExamples/GeneticAlgorithm/codingFiles/GAImage.png" id="genAPage">
+        </div>
+        <div id= "genADescription">
+            <p>
+                This is a project I made in April 2018 in which I wrote code that applied different processes in
+                Genetics to a set of 9 hue grids. I did
+                mutation, crossover, selection, and breeding (either the first grid or 9 new ones). The hue grids
+                themselves have different designs that I chose to implement.
+                I have a range of red, a range of blue, a range of green, and a rainbow color. Each color has a random
+                layout, a vertical stripe layout, a horizontal stripe layout,
+                and a gradient.
+                The muation takes the first grid and mutates it, the crossover takes the first grid and crosses it with
+                another random grid, the select1 takes the first grid and does selection on it, the breed1 breeds a new
+                grid in the first spot,
+                and the breed gen breeds a whole new generation of huegrids that are "children" of the 1st grid,
+                inheriting "chromosomes" from it. You can also adjust the rate at which
+                each square in the hue grid changes and the transparency. This was all done using a JavaScript library
+                called P5.
+            </p>
+        </div>
+        <ul id="genALinks">
+            <li><a href="https://xxk3990.github.io/genAlgorithm/codingFiles/index.html">View project</a></li>
+            <li><a href="https://github.com/xxk3990/genAlgorithm">View code</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
