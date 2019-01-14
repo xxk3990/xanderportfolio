@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<ul class="navBar">
+    <li><a href="index.html">Home</a></li>
+    <li><i>Projects</i></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+
+</ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects</title>
+    <link rel="stylesheet" href="layout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+</head>
+
+<body>
+    <h1>Projects</h1>
+
+    <div id="allProjects">
+        <div class="project">
+            <div class="front">
+                <img src="workExamples/PartyList/partyListSquare.png" class="projectPhoto">
+            </div>
+            <div class="back">
+                <div class="projectLabel">
+                    <p>Party List Using Google Firebase (JS & HTML) – Nov. 2016</p> <br>
+                    <div class="projectLink">
+                        <a href="partyList.html">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="front">
+                <img src="workExamples/AutonomousCars/IntroPageSquare.png" class="projectPhoto">
+            </div>
+            <div class="back">
+                <div class="projectLabel">
+                    <p>Problems with Autonomous Cars (HTML/CSS) - Oct. 2017</p>
+                    <br>
+                    <div class="projectLink">
+                        <a href="selfDrivingCar.html">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="front">
+                <img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto">
+            </div>
+            <div class="back">
+                <div class="projectLabel">
+                    <p>Genetic Algorithm of Hue Grids (Solo JS) - Apr. 2018</p> <br>
+                    <div class="projectLink">
+                        <a href="geneticAlgorithm.html">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(".project").flip({
+            trigger: 'click',
+            reverse: false,
+            axis: 'y'
+        });
+    </script>
+</body>
+
+</html>
