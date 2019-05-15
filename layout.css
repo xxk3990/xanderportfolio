@@ -24,6 +24,7 @@ h1 {
     margin: 0 auto;
 
 }
+
 .navBar li a {
     text-decoration: none;
     padding: 5px 5px 5px 5px;
@@ -34,6 +35,7 @@ h1 {
     border: 1px solid white;
     padding: 4px 4px 4px 4px;
 }
+
 h3 {
     text-align: center;
 }
@@ -46,10 +48,10 @@ h3 {
 }
 
 #aboutMe {
-   grid-column-start: 2;
-   grid-column-end: -2;
-   text-align: center;
-   display: inline-block;
+    grid-column-start: 2;
+    grid-column-end: -2;
+    text-align: center;
+    display: inline-block;
     margin: 0 auto;
 }
 
@@ -59,8 +61,7 @@ h3 {
 
 #picOfMe {
     float: left;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column: 1/span 1;
     padding-left: 20px;
 }
 
@@ -69,7 +70,8 @@ h3 {
     font-size: 30px;
 }
 
-.projectWrapper { /* wrapper for projects section */
+.projectWrapper {
+    /* wrapper for projects section */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -85,7 +87,8 @@ h3 {
 }
 
 
-#partyWrap, /* spacing party and gen projs on the left */
+#partyWrap,
+/* spacing party and gen projs on the left */
 #genAWrap {
     margin-left: 150px;
     margin-right: 0px;
@@ -93,24 +96,27 @@ h3 {
 }
 
 #carWrap,
-#csharpWrap { /* spacing out the car proj and c sharp proj on the right */
+#csharpWrap {
+    /* spacing out the car proj and c sharp proj on the right */
     margin-right: 150px;
     margin-left: 20px;
 }
 
 .projectPhoto {
-    width: 450px;
+    max-width: 425px;
 }
 
 #carWrap,
 #csharpWrap,
 #partyWrap,
-#genAWrap { /* giving them all equal size and margins */
+#genAWrap {
+    /* giving them all equal size and margins */
     max-width: 350px;
     height: 350px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 /* below are the grid setups for the 4 projs */
 #partyPhoto {
     grid-column: 1/span 1;
@@ -131,6 +137,7 @@ h3 {
     grid-column: 2/span 1;
     grid-row: 2/span 1;
 }
+
 /* a states for the links for each image */
 .projectLink {
     background-color: darkslategray;
@@ -159,12 +166,13 @@ h3 {
 .projectLink a:visited {
     color: darkgoldenrod;
 }
+
 /* below is the positioning for the text that appears when you hover */
 .partyLabel {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(15%, -150%);
+    transform: translate(5%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -174,7 +182,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(15%, -150%);
+    transform: translate(5%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -184,7 +192,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(15%, -180%);
+    transform: translate(15%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -193,24 +201,18 @@ h3 {
 .csharpLabel {
     visibility: hidden;
     text-align: center;
-    transform: translate(15%, -180%);
+    transform: translate(15%, -150%);
     color: white;
     font-size: 30px;
     opacity: 1;
 }
 
-
-
 .projectLink a {
     text-align: center;
 }
 
-.projectPhoto {
-    border-radius: 1em;
-    max-width: 450px;  
-}
-
-.partyWrapper { /* partyList project wrapping div */
+.partyWrapper {
+    /* partyList project wrapping div */
     display: grid;
     grid-template-rows: 10fr 10fr 10fr;
     grid-gap: .5rem;
@@ -228,18 +230,17 @@ h3 {
 
 
 #partyListDescription {
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row: 2/span 1;
     display: inline-block;
     padding-left: 30px;
     font-size: 22px;
 }
 
 #partyListLinks {
-    display: grid; /* new grid for the two links */
+    display: grid;
+    /* new grid for the two links */
     grid-template-columns: 1fr 1fr;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column: 1/span 1;
     grid-column-gap: 5em;
     font-size: 30px;
     list-style-type: none;
@@ -251,7 +252,8 @@ h3 {
     transform: scale(1.1, 1.1);
 }
 
-.carProjectWrapper {  /* AutonomousCars project wrapping div */
+.carProjectWrapper {
+    /* AutonomousCars project wrapping div */
     display: grid;
     grid-template-rows: 10fr 10fr 10fr;
     grid-gap: .5rem;
@@ -269,8 +271,7 @@ h3 {
 }
 
 #carProjDescription {
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row: 2/span 1;
     display: inline-block;
     padding-left: 30px;
     font-size: 22px;
@@ -279,13 +280,13 @@ h3 {
 
 #carProjLinks {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* I had to create a new column grid for the two links */
+    grid-template-columns: 1fr 1fr;
+    /* I had to create a new column grid for the two links */
     font-size: 30px;
     list-style-type: none;
     grid-row-start: 3;
     grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column: 1/span 2;
     grid-column-gap: 5em;
     transition: all .2s ease-in-out;
     margin: 50px auto;
@@ -295,35 +296,36 @@ h3 {
     transform: scale(1.1, 1.1);
 }
 
-.genAWrapper {  /* Genetic Algorithm project wrapping div */
+.genAWrapper {
+    /* Genetic Algorithm project wrapping div */
     display: grid;
-    grid-template-columns: 1fr 15fr 15fr 15fr 15fr 15fr; /* needed so many because the description was very long */
+    grid-template-columns: 1fr 15fr 15fr 15fr 15fr 15fr;
+    /* needed so many because the description was very long */
     grid-column-gap: 5em;
 }
 
 .GAProjImage {
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column: 1/span 1;
     padding-left: 20px;
 }
+
 .GAProjImage img {
     max-width: 350px;
 }
 
 #genADescription {
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column: 2/span 4;
     font-size: 22px;
 }
 
 #genALinks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column: 2/span 2;
     font-size: 30px;
     list-style-type: none;
-    transition: all .2s ease-in-out; /* setting up CSS animation */
+    transition: all .2s ease-in-out;
+    /* setting up CSS animation */
     margin: 50px auto;
     grid-column-gap: 5em;
 }
@@ -331,35 +333,34 @@ h3 {
 #genALinks li:hover {
     transform: scale(1.1, 1.1);
 }
+
 .cSharpWrapper {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: .5rem;
 }
+
 .CSharpVideo video {
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row: 1/span 2;
     left: 30%;
     position: relative;
 }
 
 #cSharpDescription {
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-row: 2/span 1;
     margin-left: 70px;
     margin-right: 70px;
     font-size: 22px;
 }
+
 #cSharpLinks {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    font-size: 30px;
     list-style-type: none;
-    margin: 50px auto;
-    grid-column-gap: 5em;
+    padding-top: 140px;
+    grid-row: 3/span 1;
+    grid-column: 1/span 1;
+    font-size: 30px;
 }
+
 #cSharpLinks li:hover {
     transform: scale(1.1, 1.1);
 }
@@ -381,7 +382,7 @@ h3 {
     margin-bottom: 20px;
 }
 
-#resume{
+#resume {
     text-align: center;
 }
 
@@ -399,113 +400,143 @@ img {
 body {
     background-color: #054B93;
 }
+
 /* mobile queries down below */
 @media only screen and (min-width : 320px) and (max-width : 600px) {
-/* greater than 320px (iPhone 5/SE) and smaller than 600px */
-    #projectWrapper {
 
+    /* greater than 320px (iPhone 5/SE) and smaller than 600px */
+
+    .projectWrapper {
         grid-template-columns: 1fr;
         align-content: center;
         max-width: 100vw;
-
     }
-    .projectLabel {
-        max-width: 350px;
-        margin-bottom: 5px;
-        
+
+    #partyWrap,
+    #genAWrap {
+        margin-left: 0px;
+        margin-right: 10px;
+        max-width: 400px;
+    }
+
+    #carWrap,
+    #csharpWrap {
+        max-width: 400px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .homePage {
         grid-template-columns: 1fr;
     }
+
     #picOfMe {
         padding-right: 10%;
     }
+
     #aboutMe {
         margin-left: 10%;
         margin-right: 10%
     }
+
     .carProjectWrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        
+
     }
+
     #carProjDescription {
         padding-right: 0px;
         padding-left: 0px;
     }
+
     .carImages img {
         align-content: center;
     }
+
     #carProjLinks {
         padding-left: 5px;
     }
+
     .genAWrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr 1fr;
-        
+
     }
+
     .GAProjImage {
-        grid-row: 1 /span 1;
+        grid-row: 1/span 1;
         padding-left: 10px;
     }
+
     #genADescription {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        grid-column: 1/span 1;
+        grid-row: 2/span 1;
         padding-right: 5%;
     }
+
     #genALinks {
         grid-column: 1/span 1;
-        grid-row: 3/ span 1;
+        grid-row: 3/span 1;
         padding-left: 5px;
     }
+
     .cSharpWrapper {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        max-width: 100vw;
-        grid-gap: 0px;
+        grid-template-rows: 1fr 2fr 1fr;
+        width: 100vw;
+        grid-row-gap: 0px;
     }
+
     .CSharpVideo video {
-        grid-row-start: 1;
-        grid-row-end: 1;
+        grid-row: 1/span 1;
         margin: 0px;
         left: 0%;
         margin-bottom: 0px;
-        position: absolute;
+        text-align: center;
     }
+
     #cSharpDescription {
-        padding-top: 0px;
-        width: 100vw;
+        display: inline-block;
         margin-left: 0px;
-        margin-right: 0px;
+        font-size: 22px;
+        margin-right: 250px;
+        grid-column: 1/span 1;
+        grid-row: 2/span 1;
+        margin-bottom: 0px;
     }
-    
+
     #cSharpLinks {
         grid-column: 1/span 1;
-        grid-row: 2/ span 1;
+        grid-row: 3/span 1;
         padding-left: 5px;
     }
+
     .partyWrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         margin-right: 50px;
 
     }
+
     .partyListImages img {
         margin: 0px;
     }
-    #partyListMain, #partyListDatabase {
+
+    #partyListMain,
+    #partyListDatabase {
         padding-right: 25%;
     }
+
     .profiles {
         margin-left: 10%;
     }
+
     .about {
         margin-left: 5%;
         margin-right: 5%;
     }
+
     #resume {
         margin-right: 0px;
         margin-left: 0px;
@@ -514,13 +545,25 @@ body {
     }
 
 }
+
 @media screen and (max-width: 320px) {
-/* less than or equal to iPhone 5/SE screen */
+
+    /* less than or equal to iPhone 5/SE screen */
     #projectWrapper {
-
         grid-template-columns: 1fr;
-        
+        align-content: center;
+        max-width: 100vw;
+    }
+    #partyWrap,
+    #genAWrap {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
+    #carWrap,
+    #csharpWrap {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .projectLabel {
@@ -531,76 +574,92 @@ body {
     .homePage {
         grid-template-columns: 1fr;
     }
+
     #picOfMe {
         padding-left: 0px;
     }
+
     #aboutMe {
         padding-right: 0px;
         padding-right: 0px;
     }
+
     .navBar {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
     .carProjectWrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 575px 1fr 1fr;
-        
+
     }
+
     #carProjDescription {
         padding-right: 0px;
         padding-left: 0px;
     }
+
     .carImages img {
         padding-right: 17%;
     }
+
     #carProjLinks {
         padding-left: 0px;
     }
+
     .genAWrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr 1fr 1fr;
-        
+
     }
+
     .GAProjImage img {
         grid-row: 1 /span 1;
         padding-right: 15%;
     }
+
     #genADescription {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 2;
-        grid-row-end: 2;
+        grid-column: 1/span 1;
+        grid-row: 2/span 1;
         padding-right: 5%;
     }
+
     #genALinks {
         grid-column: 1/span 1;
-        grid-row-start: 3;
-        grid-row-end: 3;
+        grid-row: 3/span 1;
         padding-left: 0px;
     }
+
     .partyWrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 375px 1fr 1fr;
 
-    } 
-    #partyListMain, #partyListDatabase {
+    }
+
+    #partyListMain,
+    #partyListDatabase {
         padding-right: 35%;
     }
+
     #partyListDescription {
         padding-bottom: 0px;
         padding-left: 0px;
     }
+
     #partyListLinks {
         padding-left: 0px;
     }
+
     .profiles {
         margin-left: 10%;
     }
+
     .about {
         margin-left: 5%;
         margin-right: 5%;
     }
+
     #resume {
         margin-left: 10%;
         margin-right: 10%;
