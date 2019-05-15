@@ -71,8 +71,13 @@ h3 {
 
 #allProjects { /* projects page wrapping div */
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+=======
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0em;
+>>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
     max-width: 90vw;
     margin: .5rem auto;
     grid-gap: 10px;
@@ -89,11 +94,16 @@ h3 {
 .projectLabel {
     display: none;
     text-align: center;
+<<<<<<< HEAD
     transform: translate(-20%, -170%); 
+=======
+    transform: translate(-10%, -70%); 
+>>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
 }
 #carDark {
     max-width: 1000px;
     max-height: 950px;
+<<<<<<< HEAD
 }
 #cSharpPhoto {
     grid-column-start: 2;
@@ -106,6 +116,8 @@ h3 {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 2;
+=======
+>>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
 }
 
 
