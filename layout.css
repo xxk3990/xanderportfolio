@@ -172,7 +172,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(5%, -180%);
+    transform: translate(15%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -182,7 +182,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(5%, -180%);
+    transform: translate(15%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
