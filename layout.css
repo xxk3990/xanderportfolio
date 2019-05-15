@@ -355,10 +355,11 @@ h3 {
 
 #cSharpLinks {
     list-style-type: none;
-    padding-top: 140px;
     grid-row: 3/span 1;
     grid-column: 1/span 1;
     font-size: 30px;
+    display: flex;
+    justify-content: space-around;
 }
 
 #cSharpLinks li:hover {
