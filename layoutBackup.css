@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: arial, sans-serif;
+    font-family: didot;
     color: white;
 
 }
@@ -22,17 +22,14 @@ h1 {
     height: 50px;
     padding: 20px 20px 9px;
     margin: 0 auto;
-
 }
 .navBar li a {
     text-decoration: none;
-    padding: 5px 5px 5px 5px;
 
 }
 
 .navBar li a:hover {
-    border: 1px solid white;
-    padding: 4px 4px 4px 4px;
+    border: 3px solid white;
 }
 h3 {
     text-align: center;
@@ -71,11 +68,10 @@ h3 {
 
 #allProjects { /* projects page wrapping div */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0em;
     max-width: 90vw;
     margin: .5rem auto;
-    grid-gap: 10px;
 }
 
 .project {
@@ -89,23 +85,11 @@ h3 {
 .projectLabel {
     display: none;
     text-align: center;
-    transform: translate(-20%, -170%); 
+    transform: translate(-10%, -70%); 
 }
 #carDark {
-    max-width: 1000px;
-    max-height: 950px;
-}
-#cSharpPhoto {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-#partyPhoto {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 2;
+   width: 100%;
+    height: 100%;
 }
 
 
@@ -240,38 +224,6 @@ h3 {
 #genALinks li:hover {
     transform: scale(1.1, 1.1);
 }
-.cSharpWrapper {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: .5rem;
-}
-.CSharpVideo video {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    left: 30%;
-    position: relative;
-}
-
-#cSharpDescription {
-    grid-row-start: 2;
-    grid-row-end: 2;
-    margin-left: 70px;
-    margin-right: 70px;
-    font-size: 22px;
-}
-#cSharpLinks {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    font-size: 30px;
-    list-style-type: none;
-    margin: 50px auto;
-    grid-column-gap: 5em;
-}
-#cSharpLinks li:hover {
-    transform: scale(1.1, 1.1);
-}
 
 .profiles {
     font-size: 30px;
@@ -368,32 +320,6 @@ body {
     #genALinks {
         grid-column: 1/span 1;
         grid-row: 3/ span 1;
-        padding-left: 5px;
-    }
-    .cSharpWrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        max-width: 100vw;
-        grid-gap: 0px;
-    }
-    .CSharpVideo video {
-        grid-row-start: 1;
-        grid-row-end: 1;
-        margin: 0px;
-        left: 0%;
-        margin-bottom: 0px;
-        position: absolute;
-    }
-    #cSharpDescription {
-        padding-top: 0px;
-        width: 100vw;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    
-    #cSharpLinks {
-        grid-column: 1/span 1;
-        grid-row: 2/ span 1;
         padding-left: 5px;
     }
     .partyWrapper {

@@ -3,7 +3,7 @@
 <ul class="navBar">
     <li><a href="index.html">Home</a></li>
     <li><i>Projects</i></li>
-    <li><a href="resume.html">Resume</a></li>
+    <li><a href="resume.html"> Resume </a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="about.html">About</a></li>
 
@@ -15,6 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projects</title>
     <link rel="stylesheet" href="layout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,26 +23,64 @@
 
     <div id="allProjects">
         <div class="project">
-            <a href="partyList.html"><img src="workExamples/PartyList/partyList.png" class="projectPhoto"> </a>
-            <div class="projectLabel">
-                <p>Party List Using Google Firebase (JS & HTML) – Nov. 2016</p>
-            </div>
+                <a href = "partyList.html"><img src = "workExamples/PartyList/partyListSquare.png" class="projectPhoto" id = "partyPhoto"></a>
+                <div class="projectLabel" id = "partyLabel">
+                   <img src = "workExamples/PartyList/partyListTitle.png" id = "partyDark">
+                </div>
+         </div>
+        <div class="project">
+                <a href = "selfDrivingCar.html"><img src="workExamples/AutonomousCars/IntroPageSquare.png" class="projectPhoto" id = "carPhoto"></a>
+                <div class="projectLabel" id = "carLabel">
+                    <img src = "workExamples/AutonomousCars/carTitle.png" id = "carDark">
+                    </div>
         </div>
+        <div class="project">
+                <a href = "geneticAlgorithm.html"><img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto" id = "genPhoto"></a>
+                <div class="projectLabel" id = "genLabel">
+                   <img src = "workExamples/GeneticAlgorithm/codingFiles/genTitle.png" id = "genDark">
+                    </div>
+                </div>
+            <div class="project">
+                <a href = "20qCSharp.html"><img src="workExamples/20QCSharp/cSharpTitle.png" class="projectPhoto" id = "cSharpPhoto"></a>
+                <div class="projectLabel" id = "cSharpLabel">
+                   <img src = "workExamples/20QCSharp/CSharpDark.png" id = "cSharpDark">
+                    </div>
+                </div>
+            </div>
 
-        <div class="project">
-            <a href="selfDrivingCar.html"><img src="workExamples/AutonomousCars/IntroPageFull.png" class="projectPhoto"></a>
-            <div class="projectLabel">
-                <p>Problems with Autonomous Cars (HTML/CSS) - Oct. 2017</p>
-            </div>
-        </div>
-        <div class="project">
-            <a href="geneticAlgorithm.html"><img src="workExamples/GeneticAlgorithm/codingFiles/GAImage.png" class="projectPhoto">
-            </a>
-            <div class="projectLabel">
-                <p>Genetic Algorithm of Hue Grids (Solo JS) - Apr. 2018</p>
-            </div>
-        </div>
-    </div>
+    <script>
+    $("#partyPhoto").hover(function () {
+        $(this).attr("src", "workExamples/PartyList/partyListTitle.png");    
+    });
+
+    $("#partyPhoto").mouseout(function() {
+            $(this).attr("src", "workExamples/PartyList/partyListSquare.png");
+        });
+
+    $("#carPhoto").hover(function () {
+       $(this).attr("src", "workExamples/AutonomousCars/carTitle.png");
+        
+    });
+
+    $("#carPhoto").mouseout(function() {
+            $(this).attr("src", "workExamples/AutonomousCars/IntroPageSquare.png");
+        });
+
+    $("#genPhoto").hover(function () {
+        $(this).attr("src", "workExamples/GeneticAlgorithm/codingFiles/genTitle.png");      
+    });
+    $("#genPhoto").mouseout(function() {
+           $(this).attr("src", "workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png");
+        });
+
+        $("#cSharpPhoto").hover(function () {
+        $(this).attr("src", "workExamples/20QCSharp/cSharpDark.png");      
+    });
+    $("#cSharpPhoto").mouseout(function() {
+           $(this).attr("src", "workExamples/20QCSharp/cSharpTitle.png");
+        });
+
+    </script>
 </body>
 
 </html>

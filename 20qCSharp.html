@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<ul class="navBar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+
+</ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20 questions C# Project</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <h1>20 Questions C# Console App</h1>
+    <div class = "cSharpWrapper">
+    <div class="CSharpVideo">
+        <video src = "workExamples/20QCSharp/gameplay.mp4" type="video/mp4" controls>
+    </div>
+        <div id="cSharpDescription">
+            <p>
+                This is a C# console app I made that allows the user to play 20 questions. The project uses File.IO to store names/clues in an external file. Before the game starts, there are three things in the file. The first is a clue and the other two are guesses.
+                The project uses a Binary Search Tree that has each clue as a branch node and the leaf nodes are names of people. The tree also allows the computer to go through and make decisions based on user input and where it is in the tree. The game begins with the computer asking if it is living.
+                 The user can then enter either yes or no, and the computer will make the guess based on user response. If the answer to the guess is no, the computer will ask who the user was thinking of, and then ask them what the difference between the two are. 
+                Once you enter that, the computer uses recursion to add the new names and clues to their correct place on the tree. In the next game, it will ask you the difference you inputted and then make a guess based on that (depending on what you say, it could also guess the new person you entered). Once you quit the project, those new names and differences are saved to the file. 
+            </p>
+        </div>
+        <ul id="cSharpLinks">
+            <li><a href="https://github.com/xxk3990/20QCSharp">View code</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
