@@ -172,7 +172,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(15%, -150%);
+    transform: translate(10%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -182,7 +182,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(15%, -150%);
+    transform: translate(10%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -192,7 +192,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(15%, -150%);
+    transform: translate(10%, -150%);
     color: black;
     font-size: 30px;
     opacity: 1;
@@ -201,7 +201,7 @@ h3 {
 .csharpLabel {
     visibility: hidden;
     text-align: center;
-    transform: translate(15%, -150%);
+    transform: translate(10%, -150%);
     color: white;
     font-size: 30px;
     opacity: 1;
