@@ -69,55 +69,134 @@ h3 {
     font-size: 30px;
 }
 
-#allProjects { /* projects page wrapping div */
+.projectWrapper { /* wrapper for projects section */
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-=======
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 0em;
->>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
     max-width: 90vw;
-    margin: .5rem auto;
-    grid-gap: 10px;
+    margin: 3rem auto;
+    grid-gap: .5em;
 }
 
-.project {
-    display: block;
-    width: 100%;
-    border-color: black;
-    border: 2px;
-    border-radius: 5px;
-}
-
-.projectLabel {
-    display: none;
+#projectH1 {
     text-align: center;
-<<<<<<< HEAD
-    transform: translate(-20%, -170%); 
-=======
-    transform: translate(-10%, -70%); 
->>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
+    padding-bottom: 20px;
+    padding-top: 50px;
 }
-#carDark {
-    max-width: 1000px;
-    max-height: 950px;
-<<<<<<< HEAD
+
+
+#partyWrap, /* spacing party and gen projs on the left */
+#genAWrap {
+    margin-left: 150px;
+    margin-right: 0px;
+
 }
-#cSharpPhoto {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 2;
+
+#carWrap,
+#csharpWrap { /* spacing out the car proj and c sharp proj on the right */
+    margin-right: 150px;
+    margin-left: 20px;
 }
+
+.projectPhoto {
+    width: 450px;
+}
+
+#carWrap,
+#csharpWrap,
+#partyWrap,
+#genAWrap { /* giving them all equal size and margins */
+    max-width: 350px;
+    height: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* below are the grid setups for the 4 projs */
 #partyPhoto {
-    grid-row-start: 1;
-    grid-row-end: 1;
-    grid-column-start: 1;
-    grid-column-end: 2;
-=======
->>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+}
+
+#genAPhoto {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+}
+
+#carPhoto {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+}
+
+#cSharpPhoto {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+}
+/* a states for the links for each image */
+.projectLink {
+    background-color: darkslategray;
+    width: 150px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.projectLink a {
+    text-decoration: none;
+}
+
+.projectLink a:link {
+    color: white;
+
+}
+
+.projectLink a:active {
+    color: red;
+}
+
+.projectLink a:hover {
+    text-decoration: underline;
+}
+
+.projectLink a:visited {
+    color: darkgoldenrod;
+}
+/* below is the positioning for the text that appears when you hover */
+.partyLabel {
+    visibility: hidden;
+    display: block;
+    text-align: center;
+    transform: translate(15%, -150%);
+    color: black;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.carLabel {
+    visibility: hidden;
+    display: block;
+    text-align: center;
+    transform: translate(15%, -150%);
+    color: black;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.genALabel {
+    visibility: hidden;
+    display: block;
+    text-align: center;
+    transform: translate(15%, -180%);
+    color: black;
+    font-size: 30px;
+    opacity: 1;
+}
+
+.csharpLabel {
+    visibility: hidden;
+    text-align: center;
+    transform: translate(15%, -180%);
+    color: white;
+    font-size: 30px;
+    opacity: 1;
 }
 
 

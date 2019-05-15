@@ -21,78 +21,98 @@
 <body>
     <h1>Projects</h1>
 
-    <div id="allProjects">
-        <div class="project">
-                <a href = "partyList.html"><img src = "workExamples/PartyList/partyListSquare.png" class="projectPhoto" id = "partyPhoto"></a>
-                <div class="projectLabel" id = "partyLabel">
-                   <img src = "workExamples/PartyList/partyListTitle.png" id = "partyDark">
-                </div>
-         </div>
-        <div class="project">
-                <a href = "selfDrivingCar.html"><img src="workExamples/AutonomousCars/IntroPageSquare.png" class="projectPhoto" id = "carPhoto"></a>
-                <div class="projectLabel" id = "carLabel">
-                    <img src = "workExamples/AutonomousCars/carTitle.png" id = "carDark">
-                    </div>
-<<<<<<< HEAD
-        </div>
-=======
-                </div>
->>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
-        <div class="project">
-                <a href = "geneticAlgorithm.html"><img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto" id = "genPhoto"></a>
-                <div class="projectLabel" id = "genLabel">
-                   <img src = "workExamples/GeneticAlgorithm/codingFiles/genTitle.png" id = "genDark">
-                    </div>
-                </div>
-<<<<<<< HEAD
-            <div class="project">
-                <a href = "20qCSharp.html"><img src="workExamples/20QCSharp/cSharpTitle.png" class="projectPhoto" id = "cSharpPhoto"></a>
-                <div class="projectLabel" id = "cSharpLabel">
-                   <img src = "workExamples/20QCSharp/CSharpDark.png" id = "cSharpDark">
-                    </div>
+    <div class="projectWrapper">
+
+        <div id="partyWrap">
+            <div class="party">
+                <img src="workExamples/PartyList/partyListSquare.png" class="projectPhoto" id="partyPhoto"
+                    alt="partyLink">
+            </div>
+            <div class="partyLabel">
+                <p>Party List Using Google Firebase <br> (JS & HTML) – Nov. 2016</p> <br>
+                <div class="projectLink">
+                    <a href="partyList.html">More info</a>
                 </div>
             </div>
-=======
+        </div>
+        <div id="carWrap">
+            <div class="car">
+                <img src="workExamples/AutonomousCars/IntroPageSquare.png" class="projectPhoto" id="carPhoto"
+                    alt="carProjPic">
+            </div>
+            <div class="carLabel">
+                <p>Problems with Autonomous Cars <br> (HTML/CSS) - Oct. 2017</p>
+                <br>
+                <div class="projectLink">
+                    <a href="selfDrivingCar.html">More info</a>
+                </div>
+            </div>
+
+        </div>
+        <div id="genAWrap">
+            <div class="genA">
+                <img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto"
+                    id="genAPhoto" alt="genAPic">
+            </div>
+            <div class="genALabel">
+                <p>Genetic Algorithm of Hue Grids <br> (Solo JS) - Apr. 2018</p> <br>
+                <div class="projectLink">
+                    <a href="geneticAlgorithm.html">More info</a>
+                </div>
             </div>
         </div>
->>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
+        <div id="csharpWrap">
+            <div class="csharp">
+                <img src="workExamples/20QCSharp/cSharpTitle.png" class="projectPhoto" id="cSharpPhoto"
+                    alt="cSharpProj">
+            </div>
+            <div class="csharpLabel">
+                <p>20 Questions Console App (C#) <br> - Nov. 2018</p> <br>
+                <div class="projectLink">
+                    <a href="20qCSharp.html">More info</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script>
-    $("#partyPhoto").hover(function () {
-        $(this).attr("src", "workExamples/PartyList/partyListTitle.png");    
-    });
+$("#partyWrap").mouseover(function () {
+    $(".party").css('opacity', '.5');
+    $(".partyLabel").css('visibility', 'visible');
+});
+$("#partyWrap").mouseout(function () {
+    $(".party").css('opacity', '1');
+    $(".partyLabel").css('visibility', 'hidden');
+});
 
-    $("#partyPhoto").mouseout(function() {
-            $(this).attr("src", "workExamples/PartyList/partyListSquare.png");
-        });
+$("#carWrap").mouseover(function () {
+    $(".car").css('opacity', '.5');
+    $(".carLabel").css('visibility', 'visible');
+});
+$("#carWrap").mouseout(function () {
+    $(".car").css('opacity', '1');
+    $(".carLabel").css('visibility', 'hidden');
+});
 
-    $("#carPhoto").hover(function () {
-       $(this).attr("src", "workExamples/AutonomousCars/carTitle.png");
-        
-    });
+$("#genAWrap").mouseover(function () {
+    $(".genA").css('opacity', '.5');
+    $(".genALabel").css('visibility', 'visible');
+});
+$("#genAWrap").mouseout(function () {
+    $(".genA").css('opacity', '1');
+    $(".genALabel").css('visibility', 'hidden');
+});
 
-    $("#carPhoto").mouseout(function() {
-            $(this).attr("src", "workExamples/AutonomousCars/IntroPageSquare.png");
-        });
-
-    $("#genPhoto").hover(function () {
-        $(this).attr("src", "workExamples/GeneticAlgorithm/codingFiles/genTitle.png");      
-    });
-    $("#genPhoto").mouseout(function() {
-           $(this).attr("src", "workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png");
-        });
-
-<<<<<<< HEAD
-        $("#cSharpPhoto").hover(function () {
-        $(this).attr("src", "workExamples/20QCSharp/cSharpDark.png");      
-    });
-    $("#cSharpPhoto").mouseout(function() {
-           $(this).attr("src", "workExamples/20QCSharp/cSharpTitle.png");
-        });
-
-=======
->>>>>>> e81b85d05b488b943f144414ecc423d813f088c8
-    </script>
+$("#csharpWrap").mouseover(function () {
+    $(".csharp").css('opacity', '.5');
+    $(".csharpLabel").css('visibility', 'visible');
+});
+$("#csharpWrap").mouseout(function () {
+    $(".csharp").css('opacity', '1');
+    $(".csharpLabel").css('visibility', 'hidden');
+});
+</script>
 </body>
 
 </html>
