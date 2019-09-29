@@ -19,9 +19,27 @@
 
 <body>
     <h1>Résumé</h1>
-    <div id = "resume">
+    <div id = "resumeDesktop">
         <object data="XanderKaylanResume.pdf" type="application/pdf" width = "900" height = "800"></object>
     </div>
+    <div id = "resumeMobile">
+        <img src = "XanderKaylanResume.jpg" id = "mobileResImg" alt = "xander kaylan resume">
+    </div>
+    <script>
+        let deskRes = document.querySelector("#resumeDesktop");
+        let mobileRes = document.querySelector("#resumeMobile");
+    window.onload = function() {
+        if(screen.width <= 600) {
+            deskRes.style.display = "none";
+            mobileRes.style.display = "block";
+        } else {
+            mobileRes.style.display = "none";
+        }
+    }
+    
+    
+    
+    </script>
 </body>
 
 </html>
