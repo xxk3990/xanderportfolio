@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <title>Project 2</title>
+</head>
+
+<body>
+    <header>
+        <h1>Star Finder!</h1>
+    </header>
+    <div id="wrapper">
+        <div id="bio">
+            <p>
+                Welcome to Star Finder! A free easy way to get information on different <em>Star Wars</em> characters!
+                We pull data from the <em>Star Wars</em> API, and allow you to search specific characters or choose from
+                random results!
+            </p>
+        </div>
+            <div id = "allSearch">
+            <input type="text" id="search">
+            <button id="searchButton" type="submit">Search!</button>
+            <p id="searchStatus">Status: Ready to search!</p>
+            </div>
+            <div class="searchResult"> <!--top flipping panel for search results!-->
+                <div class="front">
+                    <section>
+                        <p class="searchFront">No data yet!</p>
+                    </section>
+                </div>
+                <div class="back">
+                    <p class="searchData">Back</p>
+                </div>
+            </div>
+            
+        <div id="random">
+            <p id ="randomInstructions">Below you can load 3 random characters, either by movie or just completely random!</p>
+            <select id="filter">
+                <option value="0">Select movie to filter results! </option>
+                <option value="1">Episode 4 </option>
+                <option value="2">Episode 5 </option>
+                <option value="3">Episode 6 </option>
+                <option value="4">Episode 1 </option>
+                <option value="5">Episode 2 </option>
+                <option value="6">Episode 3 </option>
+            </select>
+            <button id="newRandom" type="submit">New Random Characters!</button>
+            <p id="randomStatus">Status: Ready for random!</p>
+        </div>
+        <!---Below is the HTML for the 3 bottom flipping panels. jQuery requires all 
+            to be called .front and .back-->
+        <div class="flip">
+            <div class="front">
+                <section>
+                    <p class="front1">No data yet!</p>
+                </section>
+            </div>
+            <div class="back">
+                <p class="data1">No data loaded!</p>
+            </div>
+        </div>
+
+        <div class="flip">
+            <div class="front">
+                <section>
+                    <p class="front2">No data yet!</p>
+                </section>
+            </div>
+            <div class="back">
+                <p class="data2">No data loaded!</p>
+            </div>
+        </div>
+
+        <div class="flip">
+            <div class="front">
+                <section>
+                    <p class="front3">No data yet!</p>
+                </section>
+            </div>
+            <div class="back">
+                <p class="data3">No data loaded!</p>
+            </div>
+        </div>
+
+        
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

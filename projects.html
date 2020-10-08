@@ -15,7 +15,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projects</title>
     <link rel="stylesheet" href="layout.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,20 +34,6 @@
                 </div>
             </div>
         </div>
-        <div id="carWrap">
-            <div class="car">
-                <img src="workExamples/AutonomousCars/IntroPageSquare.png" class="projectPhoto" id="carPhoto"
-                    alt="carProjPic">
-            </div>
-            <div class="carLabel">
-                <p>Problems with Autonomous Cars <br> (HTML/CSS) - Oct. 2017</p>
-                <br>
-                <div class="projectLink">
-                    <a href="selfDrivingCar.html">More info</a>
-                </div>
-            </div>
-
-        </div>
         <div id="genAWrap">
             <div class="genA">
                 <img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto"
@@ -61,6 +46,20 @@
                 </div>
             </div>
         </div>
+        <div id="audioWrap">
+            <div class="audio-visualizer">
+                <img src="workExamples/audio-visualizer/A-V-Square.png" class="projectPhoto" id="avPhoto"
+                    alt="audio-visualizer">
+            </div>
+            <div class="avisLabel">
+                <p>Audio Visualizer <br> - Mar. 2020</p> <br>
+                <div class="projectLink">
+                    <a href="audioVisualizer.html">More info</a>
+                </div>
+            </div>
+
+        </div>
+        
         <div id="csharpWrap">
             <div class="csharp">
                 <img src="workExamples/20QCSharp/cSharpTitle.png" class="projectPhoto" id="cSharpPhoto"
@@ -79,43 +78,53 @@
     <script>
         "use strict";
         //what the below JS does is it makes it so when you hover over the project images, the opacity goes to 50% and
-        // their names + a link to their spot on the page appears. When you mouseout,
+        // their names + a link to their specific page appears. When you mouseout,
         //the text disappears and the opacity returns to normal.
-        $("#partyWrap").mouseover(function () {
-            $(".party").css('opacity', '.5');
-            $(".partyLabel").css('visibility', 'visible');
-        });
-        $("#partyWrap").mouseout(function () {
-            $(".party").css('opacity', '1');
-            $(".partyLabel").css('visibility', 'hidden');
-        });
+        let party = document.querySelector(".party");
+        let partyLabel = document.querySelector(".partyLabel");
+        let genA = document.querySelector(".genA");
+        let genALabel = document.querySelector(".genALabel");
+        let csharp = document.querySelector(".csharp");
+        let csharpLabel = document.querySelector(".csharpLabel");
+        let aVis = document.querySelector(".audio-visualizer");
+        let aVisLabel = document.querySelector(".avisLabel");
 
-        $("#carWrap").mouseover(function () {
-            $(".car").css('opacity', '.5');
-            $(".carLabel").css('visibility', 'visible');
-        });
-        $("#carWrap").mouseout(function () {
-            $(".car").css('opacity', '1');
-            $(".carLabel").css('visibility', 'hidden');
-        });
+        //ES6 rules – you don't need to do a .querySelector() for ids!
 
-        $("#genAWrap").mouseover(function () {
-            $(".genA").css('opacity', '.5');
-            $(".genALabel").css('visibility', 'visible');
-        });
-        $("#genAWrap").mouseout(function () {
-            $(".genA").css('opacity', '1');
-            $(".genALabel").css('visibility', 'hidden');
-        });
+        partyWrap.onmouseover = () => {
+            party.style.opacity = '0.5';
+            partyLabel.style.visibility = 'visible';
+        }
+        partyWrap.onmouseleave = () => {
+            party.style.opacity = '1';
+            partyLabel.style.visibility = 'hidden';
+        }
+        genAWrap.onmouseover = () => {
+            genA.style.opacity = '0.5';
+            genALabel.style.visibility = 'visible';
+        }
+        genAWrap.onmouseleave = () => {
+            genA.style.opacity = '1.0';
+            genALabel.style.visibility = 'hidden';
+        }
 
-        $("#csharpWrap").mouseover(function () {
-            $(".csharp").css('opacity', '.5');
-            $(".csharpLabel").css('visibility', 'visible');
-        });
-        $("#csharpWrap").mouseout(function () {
-            $(".csharp").css('opacity', '1');
-            $(".csharpLabel").css('visibility', 'hidden');
-        });
+        csharpWrap.onmouseover = () => {
+            csharp.style.opacity = '0.5';
+            csharpLabel.style.visibility = 'visible';
+        }
+        csharpWrap.onmouseleave = () => {
+            csharp.style.opacity = '1.0';
+            csharpLabel.style.visibility = 'hidden';
+        }
+
+        audioWrap.onmouseover = () => {
+            aVis.style.opacity = '0.5';
+            aVisLabel.style.visibility = "visible";
+        }
+        audioWrap.onmouseleave = () => {
+            aVis.style.opacity = '1.0';
+            aVisLabel.style.visibility = "hidden";
+        }
     </script>
 </body>
 

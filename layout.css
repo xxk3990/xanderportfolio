@@ -2,7 +2,6 @@
     box-sizing: border-box;
     font-family: arial, sans-serif;
     color: white;
-
 }
 
 h1 {
@@ -43,26 +42,19 @@ h3 {
 
 .homePage {
     display: grid;
-    grid-template-columns: 1fr 15fr 15fr 15fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 5em;
 }
 
 #aboutMe {
-    grid-column-start: 2;
-    grid-column-end: -2;
+    grid-column: 2/span 2;
     text-align: center;
-    display: inline-block;
     margin: 0 auto;
 }
 
 #description {
     font-size: 22px;
-}
-
-#picOfMe {
-    float: left;
-    grid-column: 1/span 1;
-    padding-left: 20px;
+    font-weight: normal;
 }
 
 #projectPage {
@@ -73,11 +65,12 @@ h3 {
 .projectWrapper {
     /* wrapper for projects section */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    max-width: 90vw;
-    margin: 3rem auto;
-    grid-gap: .5em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90vw;
+    margin-left: 35px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    grid-column-gap: .5rem;
 }
 
 #projectH1 {
@@ -86,56 +79,35 @@ h3 {
     padding-top: 50px;
 }
 
-
-#partyWrap,
-/* spacing party and gen projs on the left */
-#genAWrap {
-    margin-left: 150px;
-    margin-right: 0px;
-
-}
-
-#carWrap,
-#csharpWrap {
-    /* spacing out the car proj and c sharp proj on the right */
-    margin-right: 150px;
-    margin-left: 20px;
-}
-
 .projectPhoto {
-    max-width: 425px;
+    max-width: 325px;
+    max-height: 260px;
 }
 
-#carWrap,
 #csharpWrap,
 #partyWrap,
-#genAWrap {
-    /* giving them all equal size and margins */
-    max-width: 350px;
-    height: 350px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+#genAWrap,
+#audioWrap {
+    /* giving them all equal size */
+    max-width: 325px;
+    height: 260px;
 }
 
-/* below are the grid setups for the 4 projs */
+/* below are the grid setups for the 5 projs */
 #partyPhoto {
     grid-column: 1/span 1;
-    grid-row: 1/span 1;
 }
 
 #genAPhoto {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 2/span 1;
 }
 
-#carPhoto {
-    grid-column: 2/span 1;
-    grid-row: 1/span 1;
+#avPhoto {
+    grid-column: 3/span 1;
 }
 
 #cSharpPhoto {
-    grid-column: 2/span 1;
-    grid-row: 2/span 1;
+    grid-column: 4/span 1;
 }
 
 /* a states for the links for each image */
@@ -168,42 +140,22 @@ h3 {
 }
 
 /* below is the positioning for the text that appears when you hover */
-.partyLabel {
+.partyLabel, .genALabel {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(10%, -150%);
+    transform: translate(0%, -150%);
     color: black;
-    font-size: 30px;
+    font-size: 22px;
     opacity: 1;
 }
 
-.carLabel {
-    visibility: hidden;
-    display: block;
-    text-align: center;
-    transform: translate(10%, -150%);
-    color: black;
-    font-size: 30px;
-    opacity: 1;
-}
-
-.genALabel {
-    visibility: hidden;
-    display: block;
-    text-align: center;
-    transform: translate(10%, -150%);
-    color: black;
-    font-size: 30px;
-    opacity: 1;
-}
-
-.csharpLabel {
+.csharpLabel, .avisLabel {
     visibility: hidden;
     text-align: center;
-    transform: translate(10%, -150%);
+    transform: translate(0%, -150%);
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     opacity: 1;
 }
 
@@ -215,85 +167,32 @@ h3 {
     /* partyList project wrapping div */
     display: grid;
     grid-template-rows: 10fr 10fr 10fr;
-    grid-gap: .5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: .5rem;
 }
 
+.partyListImages {
+    grid-row: 1/span 1;
+    grid-column: 1/span 3;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .partyListImages img {
     width: 100%;
-    grid-row-start: 2;
-    grid-row-end: -2;
     left: 20%;
-    position: relative;
     margin-left: 50px;
 }
 
 
 #partyListDescription {
     grid-row: 2/span 1;
+    grid-column: 1/span 3;
+    text-align: center;
     display: inline-block;
     padding-left: 30px;
     font-size: 22px;
-}
-
-#partyListLinks {
-    display: grid;
-    /* new grid for the two links */
-    grid-template-columns: 1fr 1fr;
-    grid-column: 1/span 1;
-    grid-column-gap: 5em;
-    font-size: 30px;
-    list-style-type: none;
-    transition: all .2s ease-in-out;
-    margin: 50px auto;
-}
-
-#partyListLinks li:hover {
-    transform: scale(1.1, 1.1);
-}
-
-.carProjectWrapper {
-    /* AutonomousCars project wrapping div */
-    display: grid;
-    grid-template-rows: 10fr 10fr 10fr;
-    grid-gap: .5rem;
-    margin: .5rem auto;
-}
-
-
-.carImages img {
-    width: 100%;
-    left: 5%;
-    grid-row-start: 2;
-    grid-row-end: -2;
-    position: relative;
-    margin-left: 10px;
-}
-
-#carProjDescription {
-    grid-row: 2/span 1;
-    display: inline-block;
-    padding-left: 30px;
-    font-size: 22px;
-    margin: 0 auto;
-}
-
-#carProjLinks {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* I had to create a new column grid for the two links */
-    font-size: 30px;
-    list-style-type: none;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column: 1/span 2;
-    grid-column-gap: 5em;
-    transition: all .2s ease-in-out;
-    margin: 50px auto;
-}
-
-#carProjLinks li:hover {
-    transform: scale(1.1, 1.1);
+    margin-bottom: 0;
 }
 
 .genAWrapper {
@@ -316,22 +215,6 @@ h3 {
 #genADescription {
     grid-column: 2/span 4;
     font-size: 22px;
-}
-
-#genALinks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 2/span 2;
-    font-size: 30px;
-    list-style-type: none;
-    transition: all .2s ease-in-out;
-    /* setting up CSS animation */
-    margin: 50px auto;
-    grid-column-gap: 5em;
-}
-
-#genALinks li:hover {
-    transform: scale(1.1, 1.1);
 }
 
 .cSharpWrapper {
@@ -365,6 +248,62 @@ h3 {
 #cSharpLinks li:hover {
     transform: scale(1.1, 1.1);
 }
+.audioProjectWrapper {
+    display: grid;
+    grid-template-rows: 10fr 10fr 10fr;
+    grid-gap: .5rem;
+}
+.audioImages {
+    grid-row: 1/span 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.audioImages img {
+    max-width: 525px;
+}
+#audioProjDescription {
+    grid-row: 2/span 1;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 22px;
+}
+/* #cors-notice {
+    text-align: center;
+} */
+.project-links {
+    grid-column: 1/span 3;
+    grid-row: 3/span 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+/* view code and view project links for each project */
+.view-code-li, .view-project-li {
+    /* I had to create a new column grid for the two links */
+    font-size: 30px;
+    list-style-type: none;
+    transition: all .2s ease-in-out;
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 40px;
+}
+.view-project-li a:link, .view-code-li a:link {
+    color: orangered;
+}
+.view-project-li a:active, .view-code-li a:active {
+    color: red;
+}
+
+.view-project-li:hover, .view-code-li:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.view-project-li a:visited, .view-code-li a:visited {
+    color: darkgoldenrod;
+}
+
 
 .profiles {
     font-size: 30px;
@@ -420,7 +359,6 @@ body {
         max-width: 400px;
     }
 
-    #carWrap,
     #csharpWrap {
         max-width: 400px;
         margin-left: 0px;
@@ -431,32 +369,9 @@ body {
         grid-template-columns: 1fr;
     }
 
-    #picOfMe {
-        padding-right: 10%;
-    }
-
     #aboutMe {
         margin-left: 10%;
         margin-right: 10%
-    }
-
-    .carProjectWrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-
-    }
-
-    #carProjDescription {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
-    .carImages img {
-        align-content: center;
-    }
-
-    #carProjLinks {
-        padding-left: 5px;
     }
 
     .genAWrapper {
@@ -529,6 +444,35 @@ body {
         padding-right: 25%;
     }
 
+    .audioProjectWrapper {
+        display: inline-block;
+        width: 100vw;
+        margin-left: 0px;
+        grid-column: 1/span 1;
+        margin-bottom: 0px;
+    }
+    .audioImages {
+        grid-row: 1/span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .audioImages img {
+        max-width: 325px;
+        height: 200px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+    /* #cors-notice {
+        padding-bottom: 20px;
+    } */
+    #audioProjDescription {
+        grid-row: 2/span 1;
+        margin-left: 0;
+        width: 90vw;
+    }
+
     .profiles {
         margin-left: 10%;
     }
@@ -561,7 +505,6 @@ body {
         margin-right: 0px;
     }
 
-    #carWrap,
     #csharpWrap {
         margin-left: 0px;
         margin-right: 0px;
@@ -576,10 +519,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    #picOfMe {
-        padding-left: 0px;
-    }
-
     #aboutMe {
         padding-right: 0px;
         padding-right: 0px;
@@ -588,25 +527,6 @@ body {
     .navBar {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-    }
-
-    .carProjectWrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 575px 1fr 1fr;
-
-    }
-
-    #carProjDescription {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-
-    .carImages img {
-        padding-right: 17%;
-    }
-
-    #carProjLinks {
-        padding-left: 0px;
     }
 
     .genAWrapper {
@@ -650,6 +570,9 @@ body {
 
     #partyListLinks {
         padding-left: 0px;
+    }
+    #audioProjDescription {
+        padding-right: 0px;
     }
 
     .profiles {
