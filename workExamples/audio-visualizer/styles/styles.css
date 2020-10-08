@@ -1,0 +1,252 @@
+body {
+    background: #eeeeee;
+    font-family: tahoma, verdana, sans serif;
+}
+
+#project-title {
+    width: 800px;
+    height: 10px;
+    text-align: center;
+    font-family: "Teko", sans-serif;
+    /* embedded font */
+    padding-bottom: 12px;
+}
+
+#project-title h1 {
+    margin-top: 0;
+}
+
+canvas {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    background: #fafafa;
+}
+
+#controls {
+    margin-left: 1rem;
+    display: grid;
+    /* overall grid layout for both sections of controls */
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 1fr;
+}
+
+.ctrl-title {
+    width: 400px;
+    text-align: center;
+    height: 30px;
+}
+
+.ctrl-title h4 {
+    font-family: 'Teko', sans-serif; /* embedded font */
+    font-size: 22px;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#volumeLabel {
+    margin-left: 1rem;
+}
+
+#playButton {
+    font-size: 1.2rem;
+    width: 6rem;
+}
+
+.button-container {
+    display: inline;
+    padding-right: 5px;
+    max-width: 90px;
+    margin-right: 0;
+}
+
+button[data-playing="yes"]:after {
+    content: "Pause";
+    cursor: pointer;
+}
+
+button[data-playing="no"]:after {
+    content: "Play";
+    cursor: pointer;
+}
+input[type = "range"] {
+    cursor: pointer; /* all sliders have click cursor */
+}
+
+#volumeLabel,
+#progressLabel {
+    margin-left: 0;
+}
+
+#audio-section {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    background-color: darkgray;
+    height: 275px;
+    margin-right: 10px;
+}
+
+#audio-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#audio-controls span,
+#audio-controls label,
+#track-section {
+    padding-top: 12px; /* some spacing between the audio controls */
+}
+
+#trackSelect {
+    height: 30px;
+    width: 150px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none; /* removes annoying highlight around the shape */
+}
+
+#track-label,
+#upload-label {
+    cursor: pointer;
+}
+
+#upload-wrapper {
+    text-align: center;
+    margin-top: 0;
+}
+
+#audio-upload {
+    width: 160px;
+    height: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#display-section {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 275px;
+    margin-bottom: 0;
+    background-color: darkgray;
+}
+
+#fsButton {
+    font-size: 1.2rem;
+    width: 125px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.cb-list {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+    list-style-type: none;
+    display: grid; /* grid layout for list of checkboxes and the two radio buttons */
+    grid-template-columns: 200px 200px; /* half the 400px total */
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: .3rem;
+    margin-right: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+/* rows and columns for each li in the cb-list is below */
+
+#bars-li {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+}
+
+#tri-li {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+}
+
+#curves-li {
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+}
+
+#freq-li {
+    grid-column: 1/span 1;
+    grid-row: 4/span 1;
+}
+
+#noise-li {
+    grid-column: 2/span 1;
+    grid-row: 1/span 1;
+}
+
+#invert-li {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+}
+
+#emboss-li {
+    grid-column: 2/span 1;
+    grid-row: 3/span 1;
+}
+
+#wave-li {
+    grid-column: 2/span 1;
+    grid-row: 4/span 1;
+}
+
+.cb-list label,
+.cb-list input,
+#distort-label {
+    cursor: pointer;
+}
+
+#shape-controls {
+    margin-top: 10px;
+}
+
+#curveSlider {
+    vertical-align: middle;
+}
+
+#triangleColors {
+    margin-top: 10px;
+}
+
+#button-choices {
+    display: flex;
+    justify-content: center;
+}
+
+#triangleColorTitle {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.tri-color-btn {
+    /* the three triangle buttons */
+    width: 5rem;
+    height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#topColor {
+    margin-right: 5px;
+}
+
+#bottomColor {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#bothColors {
+    margin-left: 5px;
+}

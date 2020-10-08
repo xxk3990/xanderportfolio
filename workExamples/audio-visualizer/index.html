@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Audio Visualizer</title>
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <script src="./src/loader.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <!--embedded font-->
+</head>
+
+<body>
+    <header id="project-title">
+        <h1>AUDIO VISUALIZER!</h1>
+    </header>
+    <main>
+        <canvas width="800" height="550"></canvas>
+        <div id="controls">
+            <section id="audio-section">
+                <div class="ctrl-title">
+                    <h4>Audio Controls</h4>
+                </div>
+                <div id="audio-controls">
+                    <div class="button-container"><button id="playButton" data-playing="no"></button></div>
+                    <span>Volume: <input type="range" id="volumeSlider" min="0" max="2" value="1" step="0.01"><span
+                            id="volumeLabel">???</span></span>
+                    <span>Progress: <input type="range" id="progressSlider" min="0" max="1" value="0" step="0.01"><span
+                            id="progressLabel">???</span></span>
+                    <span> <input type="checkbox" id="distortCB"> <label for="distortCB" id="distort-label"
+                            title = "Enable a distortion effect on the audio!">Distortion:</label> 0 <input type="range"
+                            min="0" max="30" value="0" id="distSlider"
+                            title = "Adjust the distortion effect (enable to hear)!"> 30</span>
+                    <section id="track-section">
+                        <input type="radio" name="track-or-upload" id="toggle-track" checked><label for="toggle-track"
+                            id="track-label" title="Toggle track select mode!">Track:</label>
+                        <select id="trackSelect">
+                            <option value="media/New Adventure Theme.mp3" selected>New Adventure Theme</option>
+                            <option value="media/Peanuts Theme.mp3">Peanuts Theme</option>
+                            <option value="media/The Picard Song.mp3">The Picard Song</option>
+                        </select>
+                    </section>
+                    <span id="upload-wrapper"><input type="radio" name="track-or-upload" id="toggle-upload"><label
+                            for="toggle-upload" id="upload-label" title="Toggle audio upload mode!">Upload Your
+                            Own!</label><br><input type="file" id="audio-upload" title="Upload your own!"
+                            disabled>
+                    </span>
+                    <!--starts disabled but becomes enabled in the js when you change to upload mode-->
+                </div>
+            </section>
+            <section id="display-section">
+                <div class="ctrl-title">
+                    <h4>Display Controls</h4>
+                </div>
+                <div id="fs-container" class="button-container"><button id="fsButton">Full Screen</button></div>
+                <ul class="cb-list">
+                    <!-- each <li> has an id for CSS Grid layout -->
+                    <li id="bars-li"><input type="checkbox" id="barsCB"><label for="barsCB" id="barsLabel">Show
+                            Bars</label></li>
+                    <li id="tri-li"><input type="checkbox" id="trianglesCB"><label for="trianglesCB">Show
+                            Triangles</label></li>
+                    <li id="curves-li"><input type="checkbox" id="curvesCB"><label for="curvesCB"
+                            title="The curve rotated around the center!">Show Bezier
+                            Curve</label></li>
+                    <li id="noise-li"><input type="checkbox" id="noiseCB"><label for="noiseCB">Show Noise</label></li>
+                    <li id="invert-li"><input type="checkbox" id="invertCB"><label for="invertCB"
+                            id="invertLabel">Invert Colors</label></li>
+                    <li id="emboss-li"><input type="checkbox" id="embossCB"><label for="embossCB">Show Emboss</label>
+                    </li>
+                    <li id="freq-li"><input type="radio" id="freq-radio" name="displayType" checked><label
+                            for="freq-radio">Frequency Display</label></li>
+                    <li id="wave-li"><input type="radio" id="wave-radio" name="displayType"><label for="wave-radio"
+                            title="Note: while waveform is active, the bars and curve decrease in opacity to avoid over-flashiness">Waveform
+                            Display</label></li>
+                </ul>
+                <section id="shape-controls"> <!-- additional shape controls -->
+                    <section id="curve-hue-section">
+                        <span id="curveHueTitle">Curve Hue Multiplier:</span>
+                        <input type="range" id="curveSlider" min="1" max="9" value="2" step="1"
+                            title="Change number multiplied by the audio data to change the curve hue value!">
+                        <span id="curveLabel">???</span>
+                    </section>
+                    <section id="triangleColors">
+                        <h4 id="triangleColorTitle">Change Triangle Colors!</h4>
+                        <span id="button-choices">
+                            <button type="button" id="topColor" class="tri-color-btn">Top</button>
+                            <button type="button" id="bottomColor" class="tri-color-btn">Bottom</button>
+                            <button type="button" id="bothColors" class="tri-color-btn">Both</button>
+                        </span>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
