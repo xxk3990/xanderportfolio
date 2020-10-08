@@ -348,15 +348,17 @@ body {
     /* greater than 320px (iPhone 5/SE) and smaller than 600px */
 
     .projectWrapper {
-        grid-template-columns: 1fr;
-        align-content: center;
-        max-width: 100vw;
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .projectWrapper img {
+        padding-bottom: 20px;
     }
 
     #partyWrap,
     #genAWrap {
         margin-left: 0px;
-        margin-right: 10px;
         max-width: 400px;
     }
 
@@ -399,10 +401,13 @@ body {
     }
 
     .cSharpWrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
-        width: 100vw;
-        grid-row-gap: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .CSharpVideo {
+        max-width: 350px;
+        max-height: 350px;
     }
 
     .CSharpVideo video {
@@ -411,16 +416,18 @@ body {
         left: 0%;
         margin-bottom: 0px;
         text-align: center;
+        max-width: 350px;
+        max-height: 350px;
     }
 
     #cSharpDescription {
-        display: inline-block;
-        margin-left: 0px;
         font-size: 22px;
-        margin-right: 250px;
         grid-column: 1/span 1;
         grid-row: 2/span 1;
         margin-bottom: 0px;
+        text-align: center;
+        width: 100%;
+        padding-top: 0;
     }
 
     #cSharpLinks {
@@ -431,18 +438,17 @@ body {
 
     .partyWrapper {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        margin-right: 50px;
-
+    }
+    .partyListImages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .partyListImages img {
         margin: 0px;
-    }
-
-    #partyListMain,
-    #partyListDatabase {
-        padding-right: 25%;
+        grid-column: 1/span 1;
     }
 
     .audioProjectWrapper {
@@ -471,7 +477,7 @@ body {
     #audioProjDescription {
         grid-row: 2/span 1;
         margin-left: 0;
-        width: 90vw;
+        width: 95vw;
     }
 
     .profiles {
@@ -559,14 +565,10 @@ body {
 
     }
 
-    #partyListMain,
-    #partyListDatabase {
-        padding-right: 35%;
-    }
-
     #partyListDescription {
         padding-bottom: 0px;
         padding-left: 0px;
+        margin-top: 100px;
     }
 
     #partyListLinks {
@@ -574,6 +576,23 @@ body {
     }
     #audioProjDescription {
         padding-right: 0px;
+    }
+    .CSharpVideo{
+        margin-bottom: 0;
+        max-height: 362px;
+    }
+
+    .cSharpWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cSharpLinks {
+        display: flex;
+        justify-content: left;
+        text-align: left;
+        max-height: 50px;
     }
 
     .profiles {
