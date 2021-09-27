@@ -4,7 +4,7 @@ body {
 }
 
 #project-title {
-    width: 800px;
+    width: 1100px;
     height: 10px;
     text-align: center;
     font-family: "Teko", sans-serif;
@@ -23,13 +23,16 @@ canvas {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
     background: #fafafa;
 }
-
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 #controls {
     margin-left: 1rem;
     display: grid;
     /* overall grid layout for both sections of controls */
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px;
 }
 
 .ctrl-title {
@@ -39,7 +42,8 @@ canvas {
 }
 
 .ctrl-title h4 {
-    font-family: 'Teko', sans-serif; /* embedded font */
+    font-family: 'Teko', sans-serif;
+    /* embedded font */
     font-size: 22px;
     margin-top: 0;
     text-align: center;
@@ -71,8 +75,10 @@ button[data-playing="no"]:after {
     content: "Play";
     cursor: pointer;
 }
-input[type = "range"] {
-    cursor: pointer; /* all sliders have click cursor */
+
+input[type="range"] {
+    cursor: pointer;
+    /* all sliders have click cursor */
 }
 
 #volumeLabel,
@@ -84,8 +90,9 @@ input[type = "range"] {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
     background-color: darkgray;
-    height: 275px;
+    height: 395px;
     margin-right: 10px;
+    max-width: 400px;
 }
 
 #audio-controls {
@@ -97,7 +104,8 @@ input[type = "range"] {
 #audio-controls span,
 #audio-controls label,
 #track-section {
-    padding-top: 12px; /* some spacing between the audio controls */
+    padding-top: 12px;
+    /* some spacing between the audio controls */
 }
 
 #trackSelect {
@@ -105,7 +113,8 @@ input[type = "range"] {
     width: 150px;
     font-size: 12px;
     cursor: pointer;
-    outline: none; /* removes annoying highlight around the shape */
+    outline: none;
+    /* removes annoying highlight around the shape */
 }
 
 #track-label,
@@ -126,14 +135,15 @@ input[type = "range"] {
 }
 
 #display-section {
-    grid-column: 2/span 1;
-    grid-row: 1/span 1;
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 275px;
+    height: 395px;
     margin-bottom: 0;
     background-color: darkgray;
+    max-width: 400px;
 }
 
 #fsButton {
@@ -147,8 +157,10 @@ input[type = "range"] {
     grid-column: 2/span 1;
     grid-row: 1/span 1;
     list-style-type: none;
-    display: grid; /* grid layout for list of checkboxes and the two radio buttons */
-    grid-template-columns: 200px 200px; /* half the 400px total */
+    display: grid;
+    /* grid layout for list of checkboxes and the two radio buttons */
+    grid-template-columns: 200px 200px;
+    /* half the 400px total */
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-column-gap: 0;
     grid-row-gap: .3rem;
@@ -217,12 +229,14 @@ input[type = "range"] {
     margin-top: 10px;
 }
 
-#button-choices {
+#button-choices,
+#bg-btn-choices {
     display: flex;
     justify-content: center;
 }
 
-#triangleColorTitle {
+#triangleColorTitle,
+#curveColorTitle {
     text-align: center;
     margin-top: 10px;
     width: 100%;
@@ -237,6 +251,15 @@ input[type = "range"] {
     font-size: 1.2rem;
     cursor: pointer;
 }
+.bg-color-btn {
+    width: 10rem;
+    height: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.curve-colors {
+    cursor: pointer;
+}
 
 #topColor {
     margin-right: 5px;
@@ -249,4 +272,16 @@ input[type = "range"] {
 
 #bothColors {
     margin-left: 5px;
+}
+#change-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+#background-btn-one-color {
+    margin-left: 5px;
+}
+#background-btn-rand-grade {
+    margin-right: 5px;
 }

@@ -15,7 +15,7 @@
         <h1>AUDIO VISUALIZER!</h1>
     </header>
     <main>
-        <canvas width="800" height="550"></canvas>
+        <canvas width="1100" height="760"></canvas>
         <div id="controls">
             <section id="audio-section">
                 <div class="ctrl-title">
@@ -28,9 +28,9 @@
                     <span>Progress: <input type="range" id="progressSlider" min="0" max="1" value="0" step="0.01"><span
                             id="progressLabel">???</span></span>
                     <span> <input type="checkbox" id="distortCB"> <label for="distortCB" id="distort-label"
-                            title = "Enable a distortion effect on the audio!">Distortion:</label> 0 <input type="range"
+                            title="Enable a distortion effect on the audio!">Distortion:</label> 0 <input type="range"
                             min="0" max="30" value="0" id="distSlider"
-                            title = "Adjust the distortion effect (enable to hear)!"> 30</span>
+                            title="Adjust the distortion effect (enable to hear)!"> 30</span>
                     <section id="track-section">
                         <input type="radio" name="track-or-upload" id="toggle-track" checked><label for="toggle-track"
                             id="track-label" title="Toggle track select mode!">Track:</label>
@@ -42,8 +42,7 @@
                     </section>
                     <span id="upload-wrapper"><input type="radio" name="track-or-upload" id="toggle-upload"><label
                             for="toggle-upload" id="upload-label" title="Toggle audio upload mode!">Upload Your
-                            Own!</label><br><input type="file" id="audio-upload" title="Upload your own!"
-                            disabled>
+                            Own!</label><br><input type="file" id="audio-upload" title="Upload your own!" disabled>
                     </span>
                     <!--starts disabled but becomes enabled in the js when you change to upload mode-->
                 </div>
@@ -73,8 +72,26 @@
                             title="Note: while waveform is active, the bars and curve decrease in opacity to avoid over-flashiness">Waveform
                             Display</label></li>
                 </ul>
-                <section id="shape-controls"> <!-- additional shape controls -->
+                <section id="shape-controls">
+                    <!-- additional shape controls -->
                     <section id="curve-hue-section">
+                        <h4 id="curveColorTitle">Change Curve Color!</h4>
+                        <span id="curve-color-radios">
+                            <input type="radio" name="curve-colors" id="rand-gradient" checked class="curve-colors"
+                                title="note: switching between these will reset the color values"><label
+                                for="rand-gradient" id="rand-grade-label" class="curve-colors"
+                                title="note: switching between these will reset the color values">Random
+                                Gradient</label>
+                            <input type="radio" name="curve-colors" id="one-curve-color" class="curve-colors"
+                                title="note: switching between these will reset the color values"><label
+                                for="one-curve-color" id='one-curve-color-label' class="curve-colors"
+                                title="note: switching between these will reset the color values">One color </label>
+                            <input type="radio" name="curve-colors" id="normal-mode" class="curve-colors"
+                                title="note: switching between these will reset the color values"><label
+                                for="normal-mode" id="normal-mode-label" class="curve-colors"
+                                title="note: switching between these will reset the color values">Change Via Audio
+                            </label>
+                        </span>
                         <span id="curveHueTitle">Curve Hue Multiplier:</span>
                         <input type="range" id="curveSlider" min="1" max="9" value="2" step="1"
                             title="Change number multiplied by the audio data to change the curve hue value!">
@@ -86,6 +103,15 @@
                             <button type="button" id="topColor" class="tri-color-btn">Top</button>
                             <button type="button" id="bottomColor" class="tri-color-btn">Bottom</button>
                             <button type="button" id="bothColors" class="tri-color-btn">Both</button>
+                        </span>
+                    </section>
+                    <section id="change-background">
+                        <h4 id="triangleColorTitle">Change Background Color!</h4>
+                        <span id="bg-btn-choices">
+                            <button id="background-btn-rand-grade" class="bg-color-btn"
+                                title="Change background to a random gradient!">Gradient</button>
+                            <button id="background-btn-one-color" class="bg-color-btn"
+                                title="Change background to a single color!">One Color </button>
                         </span>
                     </section>
                 </section>
