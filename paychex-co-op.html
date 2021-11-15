@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<ul class="navBar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="workExp.html">Work</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+
+</ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paychex Co-Op</title>
+    <link rel="stylesheet" href="layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="work-container">
+        <section class="work-title">
+            <h3><em>Paychex</em> Co-Op – Summer 2021</h3>
+            <h4>Note: Since this project was internal to the company, I sadly do not have any images of the app.</h4>
+        </section>
+        <section class="project-details work-box">
+            <h3>Project Details:</h3>
+            <ul class="details-list work-list">
+                <li>Created a portal allowing insurance teams to view policies that require attention.
+                    <ul class="sub-bullets">
+                        <li> Usual access databases would take a long time to update with new policies and new policy
+                            information so a web app to show them updating in real-time would be easier</li>
+                    </ul>
+                </li>
+                <li> Showed properties of each policy on the app
+                    <ul class="sub-bullets">
+                        <li>Policy Id, Client Id, Client Name, Created Date, Updated Date, Specialist, and the reason
+                            the policy requires attention
+                            <ul class="sub-sub-bullets">
+                                <li>Example: one or more of the requirements to validate the policy failed</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Allowed users to change information about the policy
+                    <ul class="sub-bullets">
+                        <li>Examples: <br>
+                            <ul class="sub-sub-bullets">
+                                <li>Update specialist</li>
+                                <li>Update notes of the policy</li>
+                                <li>Update statuses of the policy</li>
+                            </ul>
+                    </ul>
+                </li>
+                <li>Timeline
+                    <ul class="sub-bullets">
+                        <li>It was a proof of concept, so we continued adding stuff right up until the end of the co-op.
+                            It was about a three month project.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="team work-box">
+            <h3>Team:</h3>
+            <ul class="team-list work-list">
+                <li>App was created by me and three other co-op students with help from <em>Paychex</em> developers.
+                </li>
+                <li>Requirements for features on the app were provided by a Paychex employee who had just graduated from
+                    University of Buffalo so he was close to our age and understood how young developers in the industry
+                    think and handle situations. </li>
+                <li>We had a supervisor who we communicated with as well. </li>
+            </ul>
+        </section>
+        <section class="challenges work-box">
+            <h3>Challenges I Faced:</h3>
+            <ul class="challenges-list work-list">
+                <li> I went into co-op as a purely front-end developer with only some server side experience. The server
+                    side experience I had leading up to that point was only Node.js API handling and a little Java.
+                    <ul class="sub-bullets">
+                        <li>For the first few weeks I tried to stay in a front-end role but a time came when I had to
+                            write some server side code in Python Flask (the back-end developers on our team were busy
+                            with other important tasks)</li>
+                        <li>Server side code took API call from front-end and either updated, created, or pulled data
+                            from Cosmos DB.</li>
+                        <li>It was very intimidating at first looking at a language I had never worked with before, so I
+                            decided to begin by going off what my teammates had done and using that to get a better hang
+                            of it.
+                            <ul class="sub-sub-bullets">
+                                <li>This worked perfectly – eventually by the end I was writing more advanced Flask
+                                    api-handling code to not just pull data from a database container but also to upsert
+                                    it (a fancy databasing word for update if something exists or insert if it doesn’t!)
+                                    and,
+                                    in one case, create the container via Flask, upsert data into it, and, for each new
+                                    POST request, check if the container existed and if it did add to the existing one
+                                    instead of creating a new duplicate one.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>If I could do it over again, I’d make sure to not be as hesitant about writing back-end code
+                            – I thoroughly enjoyed working with Python Flask and am very grateful (one of a VERY LONG
+                            list of things I'm grateful to <em> Paychex</em> for!) to this company for helping me leave
+                            my areas of expertise to try new things. </li>
+
+                    </ul>
+
+            </ul>
+        </section>
+        <section class="expectations work-box">
+            <h3>Exceeding Expectations:</h3>
+            One instance I think could qualify as going beyond their expectations was, continuing from the previous
+            section, my switch from front-end to full stack developer. I was initially hired for my front-end & UI/UX
+            skills – someone who could layout a web app, style it, populate the app with data, and create icons and
+            logos whenever needed. After I went out of my comfort zone and began writing server side code as well, other
+            developers congratulated and thanked me for adapting to and taking on a new role so quickly and for the
+            benefit of both the app and its users.
+        </section>
+    </section>
+</body>
+
+</html>
