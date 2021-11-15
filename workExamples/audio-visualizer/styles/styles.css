@@ -257,9 +257,9 @@ input[type="range"] {
     font-size: 1.2rem;
     cursor: pointer;
 }
-.curve-colors {
+/* .curve-colors {
     cursor: pointer;
-}
+} */
 
 #topColor {
     margin-right: 5px;

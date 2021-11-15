@@ -152,6 +152,12 @@ function loop() {
         randGradeCurveLabel.style.opacity = '0.5';
         audioCurveLabel.style.opacity = '0.5';
         oneCurveColorLabel.style.opacity = '0.5';
+        randCurveGrade.style.cursor = "default";
+        audioCurveColor.style.cursor = "default";
+        oneCurveColor.style.cursor = "default";
+        randGradeCurveLabel.style.cursor = "default";
+        audioCurveLabel.style.cursor = "default";
+        oneCurveColorLabel.style.cursor = "default";
 
     } else {
         if (audioCurveColor.checked) {
@@ -178,6 +184,12 @@ function loop() {
         randGradeCurveLabel.style.opacity = '1';
         audioCurveLabel.style.opacity = '1';
         oneCurveColorLabel.style.opacity = '1';
+        randCurveGrade.style.cursor = "pointer";
+        audioCurveColor.style.cursor = "pointer";
+        oneCurveColor.style.cursor = "pointer";
+        randGradeCurveLabel.style.cursor = "pointer";
+        audioCurveLabel.style.cursor = "pointer";
+        oneCurveColorLabel.style.cursor = "pointer";
     }
     if (triCheck.checked == false) {
         triTopColorButton.setAttribute("disabled", true); //disable tri color buttons if tri cb is unchecked

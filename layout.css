@@ -80,6 +80,10 @@ h3 {
     padding-top: 50px;
 }
 
+.projects-hint {
+    text-align: center;
+}
+
 .projectPhoto {
     max-width: 325px;
     max-height: 260px;
@@ -346,6 +350,12 @@ body {
 @media only screen and (min-width : 320px) and (max-width : 600px) {
 
     /* greater than 320px (iPhone 5/SE) and smaller than 600px */
+
+    .homePage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .projectWrapper {
         display: flex; 
