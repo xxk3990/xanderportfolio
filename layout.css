@@ -84,9 +84,10 @@ h3 {
     text-align: center;
 }
 
-.projectPhoto {
-    max-width: 325px;
-    max-height: 260px;
+img.projectPhoto {
+    min-width: 375px;
+    max-width: 375px;
+    height: 335px;
 }
 
 #csharpWrap,
@@ -149,7 +150,7 @@ h3 {
     visibility: hidden;
     display: block;
     text-align: center;
-    transform: translate(0%, -150%);
+    transform: translate(5%, -200%);
     color: black;
     font-size: 22px;
     opacity: 1;
@@ -158,7 +159,7 @@ h3 {
 .csharpLabel, .avisLabel {
     visibility: hidden;
     text-align: center;
-    transform: translate(0%, -150%);
+    transform: translate(5%, -200%);
     color: white;
     font-size: 22px;
     opacity: 1;
@@ -355,6 +356,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .projectWrapper {
@@ -363,6 +365,13 @@ body {
         align-items: center;
         width: 75vw;
     }
+
+    img.projectPhoto {
+        max-width: 300px;
+        min-width: 300px;
+        height: 260px;
+    }
+
     .projectWrapper img {
         padding-bottom: 20px;
     }
@@ -377,10 +386,6 @@ body {
         max-width: 400px;
         margin-left: 0px;
         margin-right: 0px;
-    }
-
-    .homePage {
-        grid-template-columns: 1fr;
     }
 
     #aboutMe {
