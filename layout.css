@@ -394,11 +394,13 @@ body {
 .work-list li {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .work-box {
     border: 1px solid white;
     padding: 10px;
+    font-size: 22px;
 }
 
 #presentation-img {
