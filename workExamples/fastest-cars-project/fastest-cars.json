@@ -1,0 +1,180 @@
+[
+   {
+      "id": 0,
+      "model":"Jesko Absolut",
+      "make":"Koenigsegg",
+      "top_speed":330,
+      "description":"This vehicle has 1600 brake horsepower with a five liter V8 engine that has added downforce due to a sleek body. However, while the other cars have officially reached their top speed, the Jesko Absolut's claimed top speed of 330 is only what their calculations say, as they have not been able to officially test it.",
+      "image": {
+         "sixHundred": "imgs/jesko.jpeg",
+         "fourHundred": "imgs/jesko-400.jpeg",
+         "threeFifty": "imgs/jesko-350.jpeg",
+         "threeHundred": "imgs/jesko-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:GIMS_2019,_Le_Grand-Saconnex_(GIMS0833).jpg",
+         "changes_made":"resized to 600px width",
+         "author":"Matti Blume"
+      }
+   },
+   {
+      "id": 1,
+      "model":"Chiron Super Sport 300+",
+      "make":"Bugatti",
+      "top_speed":304,
+      "description":"This car was tested and hit 304mph. It has 1,600 brake horsepower and can hit 60mph in only 2.3 seconds.",
+      "image":{
+         "sixHundred": "imgs/chiron_300plus.jpeg",
+         "fourHundred": "imgs/chiron_300plus-400.jpeg",
+         "threeFifty" : "imgs/chiron_300plus-350.jpeg",
+         "threeHundred": "imgs/chiron_300plus-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:2020_Bugatti_Chiron_Super_Sport_300%2B_Prototype.jpg",
+         "changes_made":"resized to 600px width",
+         "author":"Liam Walker"
+      }
+   },
+   {
+      "id": 2,
+      "model":"Venom F5",
+      "make":"Hennessey",
+      "top_speed":311,
+      "description":"The fastest US car on this list, this car will fly past 300 MPH due to a 1,817 brake horsepower 6.6 liter V8 with two turbochargers that will also allow it to hit 60MPH in 2.4 seconds.",
+      "image":{
+         "sixHundred": "imgs/venom_f5.jpeg",
+         "fourHundred": "imgs/venom_f5-400.jpeg",
+         "threeFifty": "imgs/venom_f5-350.jpeg",
+         "threeHundred": "imgs/venom_f5-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:Hennessey_Venom_F5_Genf_2018.jpg",
+         "changes_made":"resized to 600px width",
+         "author":"Alexander Migl"
+      }
+   },
+   {
+      "id": 3,
+      "model":"Tuatara",
+      "make":"SSC",
+      "top_speed":282.9,
+      "description":"Although initial testing had some problems, this car was able to set an average top speed of 282.9MPH with its 1,750 BHP. It can also hit 60 MPH in 2.5 seconds. ",
+      "image": {
+         "sixHundred": "imgs/tuatara.jpeg",
+         "fourHundred": "imgs/tuatara-400.jpeg",
+         "threeFifty": "imgs/tuatara-350.jpeg",
+         "threeHundred": "imgs/tuatara-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:2019_SSC_Tuatara_at_Pebble_Beach_Press_Conference.jpg",
+         "changes_made":"resized to 500px by 335px",
+         "author":"Corbin Harder"
+      }
+   },
+   {
+      "id": 4,
+      "model":"Valkyrie",
+      "make":"Aston Martin",
+      "top_speed":250,
+      "description":"This car, with its V12 engine and hybrid technology, has 1,160 BHP a top speed of over 250 miles an hour and a 0-60 of 2.5 seconds.",
+      "image": {
+         "sixHundred": "imgs/valkyrie.jpeg",
+         "fourHundred": "imgs/valkyrie-400.jpeg",
+         "threeFifty": "imgs/valkyrie-350.jpeg",
+         "threeHundred": "imgs/valkyrie-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:Aston_Martin_Valkyrie_Verification_Prototype_001_Genf_2019_1Y7A5569.jpg",
+         "changes_made":"resized to 600px width",
+         "author":"Alexander Migl"
+      }
+   },
+   {
+      "id": 5,
+      "model":"Speedtail",
+      "make":"Mclaren",
+      "top_speed":250,
+      "description":"A hypercar from a company with a history of speed record cars, this car will no doubt reach its 250 MPH top speed. It has 1,036 BHP and can reach 60 in 2.9 seconds.",
+      "image": {
+         "sixHundred": "imgs/speedtail.jpg",
+         "fourHundred": "imgs/speedtail-400.jpg",
+         "threeFifty": "imgs/speedtail-350.jpg",
+         "threeHundred": "imgs/speedtail-300.jpg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:2020_McLaren_Speedtail_4.0_Rear.jpg",
+         "changes_made":"resized to 600px width",
+         "author":"Liam Walker"
+      }
+   },
+   {
+      "id": 6,
+      "model":"Nevera",
+      "make":"Rimac",
+      "top_speed":258,
+      "description":"This hypercar truly shows that the future of massive power cars will likely end up being electric. It has 1,914 BHP and can hit 62 MPH in ONLY 1.97 seconds!",
+      "image":{
+         "sixHundred": "imgs/rimac_nevera.jpeg",
+         "fourHundred": "imgs/rimac_nevera-400.jpeg",
+         "threeFifty": "imgs/rimac_nevera-350.jpeg",
+         "threeHundred": "imgs/rimac_nevera-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:Rimac_Nevera.jpg",
+         "changes_made":"resized to 600px width",
+         "author":"User MrWalkr"
+      }
+   },
+   {
+      "id": 7,
+      "model":"Gemera",
+      "make":"Koenigsegg",
+      "top_speed":249,
+      "description":"With only a 3 cylinder engine, you wouldn't expect this car to be on this list, but Koenigsegg have put their magic into it. It has 1,700 BHP and gets to 60 in a whopping 1.9 seconds. It will also seat four people, so you can enjoy a drive with three friends.",
+      "image":{
+         "sixHundred": "imgs/gemera.jpg",
+         "fourHundred": "imgs/gemera-400.jpg",
+         "threeFifty": "imgs/gemera-350.jpg",
+         "threeHundred": "imgs/gemera-300.jpg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:2020_Koenigsegg_Gemera_2.0.jpg",
+         "changes_made":"resized to 600px width",
+         "author":"Liam Walker"
+      }
+   },
+   {
+      "id": 8,
+      "model":"GT",
+      "make":"Ford",
+      "top_speed":216,
+      "description":"This car has 660 BHP from a 3.5 liter V6 with two turbochargers, allowing it to hit 216 MPH and 60 in 3 seconds flat.",
+      "image": {
+         "sixHundred": "imgs/gt.jpg",
+         "fourHundred": "imgs/gt-400.jpg",
+         "threeFifty": "imgs/gt-350.jpg",
+         "threeHundred": "imgs/gt-300.jpg"
+      },
+      "imageSource":{
+         "url":"https://pixabay.com/photos/car-auto-ford-gt-gt-ford-gt-2020-4865483/"
+      }
+   },
+   {
+      "id": 9,
+      "model":"One",
+      "make":"Mercedes-AMG",
+      "top_speed":217,
+      "description":"With technology borrowed from its f1 team, Mercedes-AMG is giving this car over 1,000 BHP and a 0-60 in 2.6 seconds.",
+      "image": {
+         "sixHundred": "imgs/one.jpeg",
+         "fourHundred": "imgs/one-400.jpeg",
+         "threeFifty": "imgs/one-350.jpeg",
+         "threeHundred": "imgs/one-300.jpeg"
+      },
+      "imageSource":{
+         "url":"https://commons.wikimedia.org/wiki/File:AMG_at_IAA_2017_(05).jpg",
+         "changes_made":"resized to 600px width",
+         "author":"User NearEMPTiness"
+      }
+   }
+]

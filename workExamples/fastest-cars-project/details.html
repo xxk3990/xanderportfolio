@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" id="details-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body id="details-body">
+    <section id="carDetails">
+
+    </section>
+    <script src="details.js"></script>
+    <footer class="nav-bar">
+        <section id="pages-links">
+            <!--
+            This neat trick of adding a <div> to an <a> allows you to make
+            an <a> tag that fills an entire section and isn't just text!   
+            -->
+            <a id="backLink" href="javascript:window.history.back()">
+                <div> &#8592; Back </div>
+            </a>
+            <a id="homeLink" href="main-list.html">
+                <div> Home </div>
+            </a>
+            <a id="sourcesLink" href="sources.html">
+                <div>Sources</div>
+            </a>
+        </section>
+    </footer>
+</body>
+
+</html>

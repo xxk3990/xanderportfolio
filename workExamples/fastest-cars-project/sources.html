@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sources</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="sourcesList">
+        <section id="sources">
+            <section id="static-sources"> <!--had to remove the info source from the json to avoid issues-->
+                <section id="information-source" class = "static-src">
+                    <h4 class="source-header">Source for information</h4>
+                    <p>Turkus, Brandon. "Fastest Cars In The World - Top MPH." <em>Motor1.com</em>, 27 Jan.
+                        2021, 12:46pm EST, <a id ="info-src"
+                            href="https://www.motor1.com/car-lists/fastest-cars-in-the-world/">www.motor1.com/car-lists/fastest-cars-in-the-world/</a>
+                        <br>
+                        <br>
+                        Note: The article was updated on 14 April 2022 at 1:31PM, so I updated my list in May 2022 with one of the newer cars they included, the Rimac Nevera (it originally had the previous Rimac model, the Concept One). The the other ones I had originally included are still part of their updated list! Also, not all the cars in their list are included in this project.
+                    </p>
+                </section>
+                <section id="cc-license" class = "static-src">
+                    <h4 class="source-header">Creative Commons License</h4>
+                    <!--required for WikiMedia Commons use-->
+                    <a class = "img-src"
+                        href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">https://creativecommons.org/licenses/by-sa/4.0/deed.en</a>
+                </section>
+                <section id="bg-img-source" class = "static-src">
+                    <h4 class="source-header"> Background Image </h4>
+                    <a class = "img-src" href="https://pixabay.com/photos/serpentine-alps-mountain-car-road-454249/">
+                        https://pixabay.com/photos/serpentine-alps-mountain-car-road-454249/
+                    </a>
+                </section>
+            </section>
+            <section id="dynamicSources"> <!--sources lodaed from JSON go here!-->
+            </section>
+        </section>
+
+    </section>
+    <script src="sources.js"></script>
+    <footer class="nav-bar">
+        <section id="pages-links">
+            <!--
+            This neat trick of adding a <div> to an <a> allows you to make
+            an <a> tag that fills an entire section and isn't just text!   
+            -->
+            <a id="backLink" href="javascript:window.history.back()">
+                <div> &#8592; Back </div>
+            </a>
+            <a id="homeLink" href="main-list.html">
+                <div> Home </div>
+            </a>
+            <div id="sourcesLink">
+                <div><strong>Sources</strong></div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

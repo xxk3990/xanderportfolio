@@ -1,0 +1,390 @@
+body {
+    background: url("../imgs/background.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+    /* stops bg image from scrolling with data on page */
+}
+#indexBody {
+    height: 100vh;
+}
+
+#carsList {
+    display: grid;
+    /* repeat() works well for dynamically loading a grid! */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 15px;
+    z-index: 0;
+}
+
+#carDetails,
+#sourcesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(5, 75, 147, 0.7);
+    height: 450px;
+    cursor: pointer;
+}
+
+#sources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(5, 75, 147, 0.7);
+    color: white;
+    text-align: center;
+    height: 1300px; /* this was the only height that would have all the data show */
+}
+
+.img-src,
+#info-src {
+    color: white;
+}
+
+#car-img-sources, .static-src {
+    border-bottom: 1px solid white;
+}
+
+.source-header { /* all source title headers */
+    font-family: "Lora";
+    text-decoration: underline;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.source-data {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Noto Sans";
+    padding: 0;
+    margin-top: 10px;
+}
+
+#car {
+    text-align: center;
+}
+
+.make-model {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Lora";
+    font-size: 21px;
+    color: white;
+}
+
+.make-model-title {
+    font-family: "Lora";
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.make-model h4 {
+    margin-top: 10px;
+}
+
+#details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(5, 75, 147, 0.7);
+    height: 700px;
+}
+
+#detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#top_speed_title,
+#description h4 {
+    /* make both section titles underlined and have normal font weight */
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+#topSpeedAmt {
+    font-weight: normal;
+}
+
+#top-speed {
+    /* top speed span */
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#description {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.nav-bar {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 35px;
+    background-color: #054b93;
+    bottom: 0;
+    left: 0;
+}
+
+#pages-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#pages-links a,
+#pages-links div {
+    /* turns navbar links into clickable elements instead of just text */
+    width: 100%;
+    height: 50px;
+    background-color: #054b93;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    vertical-align: middle;
+    font-family: "Noto Sans";
+    text-align: center;
+}
+
+#pages-links a div {
+    text-align: center;
+}
+
+#app-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(5, 75, 147, 0.7);
+    text-align: center;
+    color: white;
+    font-family: "Noto Sans";
+    font-size: 22px;
+}
+#welcome {
+    font-family: "Lora";
+    text-align: center; 
+    color: white;
+}
+
+@media screen and (min-width: 321px) and (max-width: 600px) {
+    body {
+        background: url("../imgs/background.jpg");
+        background-size: 100vw 100vh;
+        background-attachment: fixed;
+    }
+
+    #details-html,
+    #details-body {
+        margin-top: 0;
+        /* reduces scrolling issues */
+    }
+
+    #carsList,
+    #carDetails,
+    #sourcesList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sources {
+        font-size: 17px;
+        height: 1575px; /* had to be EVEN longer for this one */
+    }
+
+    #cars {
+        width: 350px;
+        height: 300px;
+    }
+
+    #car-image,
+    #car-image-zoomed {
+        width: 350px;
+    }
+
+    #car-image-zoomed {
+        margin-top: 7px;
+        /* add a bit of spacing between image and top of section on details page */
+    }
+
+    .make-model {
+        /* for some reason it had extra padding and margins in the mobile version!*/
+        margin: 0;
+        padding: 0;
+        height: 40px;
+    }
+
+    #details {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #top-speed {
+        height: 40px;
+        margin-bottom: 0;
+    }
+
+    #top-speed h4 {
+        margin-top: 15px;
+    }
+
+    #description {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #description h4 {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    #description p {
+        margin-top: 15px;
+        font-size: 19px;
+    }
+
+    .img-src,
+    #info-src {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .source-data,
+    #information-source p,
+    #bg-img-source {
+        padding: 0;
+    }
+    .source-header {
+        max-width: 375px;
+    }
+    
+    #app-info {
+        height: 50vh;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    html,
+    body {
+        background: url("../imgs/background.jpg");
+        background-size: 100vw 100vh;
+        background-attachment: fixed;
+    }
+
+    #details-html,
+    #details-body {
+        margin-top: 0;
+        /* reduces scrolling issues */
+    }
+
+    #carsList,
+    #carDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #details {
+        width: 100vw;
+        height: 600px;
+    }
+
+    #car-image,
+    #car-image-zoomed {
+        width: 300px;
+    }
+
+    #car-image-zoomed {
+        margin-top: 7px;
+        /* add a bit of spacing between image and top of section on details page */
+    }
+
+    #cars {
+        width: 300px;
+        height: 300px;
+    }
+
+    .make-model {
+        /* for some reason it had extra padding and margins in the mobile version!*/
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        font-size: 20.5px;
+        margin-bottom: 20px;
+    }
+
+    #top-speed {
+        height: 30px;
+        margin-bottom: 0;
+    }
+
+    #top-speed h4 {
+        margin-top: 10px;
+    }
+
+    #description {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 17px;
+    }
+
+    #description h4 {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    #description p {
+        margin-top: 10px;
+    }
+    #sources {
+        height: 1500px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #carsList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #car-image {
+        width: 600px;
+    }
+
+    #cars {
+        width: 600px;
+        height: 500px;
+    }
+    #sources {
+        height: 1400px;
+    }
+
+}
