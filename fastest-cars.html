@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <ul class="navBar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="workExp.html">Work</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+    
+    </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastest Cars Project</title>
+    <link rel="stylesheet" href="layout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Fastest Cars Project</h1>
+        <section class="fastest-cars-wrapper">
+            <section class="carImages">
+                <img id = "car-image" alt='fastest-cars-list-top'>
+            </section>
+            <section id="fastest-cars-description" class = "project-description">
+                <p>
+                    In April 2021, I utilized HTML/CSS, JavaScript, and JSON to make a project detailing the fastest cars in the world as of April 2021. I began by doing some research on the fastest cars in the world, found a source that had a list 
+                    (the source is cited in the sources page of the project), and put the information into a JSON file. Each entry in the JSON has a unique id (this allowed for only one details file – instead of one for each car, which I at first thought I'd have to do – that only displayed the information corresponding to the id), the make, model, top speed, description, 
+                    and information for the source of the image. XMLHttpRequests are used to grab the data from the JSON and then display the properties on various pages. This project is also 100% responsive, however it achieves this in a way I had not used before: rather than resizing the original image in the CSS for each set of dimensions (what I was used to doing), for this project I was tasked with utilizing HTML's &lt;picture&gt; element, 
+                    source media, and srcset attributes. What this entailed was duplicating each image a few times, resizing them for the different screen sizes, creating a separate JSON property for each image size, and using the &lt;picture&gt; element, source media, and srcset attributes to display a new image for each set of dimensions.
+                    <br>
+                    <br>
+                    Note: The original article updated its list in April 2022 with some newer cars, though most of the ones from the previous list I used are still there. When I first made this project, all of the ones on this project's list were the ones in the article!
+                </p>
+            </section>
+            <ul id="fastestCarsProjLinks" class='project-links'>
+                <li class='view-project-li'><a target="_blank" href="https://xxk3990.github.io/fastest-cars-project/">View Project</a></li>
+                <li class='view-code-li'><a target="_blank" href="https://github.com/xxk3990/fastest-cars-project">View Code</a>
+                </li>
+            </ul>
+        </section>
+        <script>
+            let carImage = document.querySelector("#car-image");
+            if(screen.width > 600) {
+                carImage.src = "workExamples/fastest-cars-project/car-list-top.png";
+            } else {
+                carImage.src = "workExamples/fastest-cars-project/car-list-top-mobile.png";
+            }
+        </script>
+</body>
+</html>

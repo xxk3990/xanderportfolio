@@ -22,54 +22,69 @@
 <body>
     <header class="projects-header">
         <h1>Projects</h1>
-        <h3 class="projects-hint">Hover over each image for more info!</h3>
+        <h3 class="projects-hint">These projects go in order of when I first worked on them. Hover over each image for more info!</h3>
     </header>
     <section class="projectWrapper">
-        <section id="partyWrap">
-            <section class="party">
-                <img src="workExamples/PartyList/partyListSquare.png" class="projectPhoto" id="partyPhoto"
-                    alt="partyLink">
+        <section id = "row-one">
+            <section id="partyWrap" class="project-square">
+                <section class="party">
+                    <img src="workExamples/PartyList/partyListSquare.png" class="projectPhoto" id="partyPhoto"
+                        alt="partyLink">
+                </section>
+                <section class="partyLabel project-label">
+                    <p>Party List Using Google Firebase <br> Nov. 2016</p> <br>
+                    <section class="projectLink">
+                        <a href="partyList.html">More info</a>
+                    </section>
+                </section>
             </section>
-            <section class="partyLabel project-label">
-                <p>Party List Using Google Firebase <br> Nov. 2016</p> <br>
-                <section class="projectLink">
-                    <a href="partyList.html">More info</a>
+            <section id="genAWrap" class="project-square">
+                <section class="genA">
+                    <img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto"
+                        id="genAPhoto" alt="genAPic">
+                </section>
+                <section class="genALabel project-label">
+                    <p>Genetic Algorithm of Hue Grids <br> Apr. 2018</p> <br>
+                    <section class="projectLink">
+                        <a href="geneticAlgorithm.html">More info</a>
+                    </section>
+                </section>
+            </section>
+            <section id="csharpWrap" class="project-square">
+                <section class="csharp">
+                    <img src="workExamples/20QCSharp/cSharpTitle.png" class="projectPhoto" id="cSharpPhoto"
+                        alt="cSharpProj">
+                </section>
+                <section class="csharpLabel project-label">
+                    <p>20 Questions Console App (C#) <br> Nov. 2018</p> <br>
+                    <section class="projectLink">
+                        <a href="20qCSharp.html">More info</a>
+                    </section>
                 </section>
             </section>
         </section>
-        <section id="genAWrap">
-            <section class="genA">
-                <img src="workExamples/GeneticAlgorithm/codingFiles/GAImageSquare.png" class="projectPhoto"
-                    id="genAPhoto" alt="genAPic">
-            </section>
-            <section class="genALabel project-label">
-                <p>Genetic Algorithm of Hue Grids <br> Apr. 2018</p> <br>
-                <section class="projectLink">
-                    <a href="geneticAlgorithm.html">More info</a>
+        <section id = "row-two">
+            <section id="audioWrap" class="project-square">
+                <section class="audio-visualizer">
+                    <img src="workExamples/audio-visualizer/A-V-Square.png" class="projectPhoto" id="avPhoto"
+                        alt="avLink">
+                </section>
+                <section class="avisLabel project-label">
+                    <p>Audio Visualizer <br> Mar. 2020 (original) <br> Sept. 2021 (new features)</p> <br>
+                    <section class="projectLink">
+                        <a href="audioVisualizer.html">More info</a>
+                    </section>
                 </section>
             </section>
-        </section>
-        <section id="audioWrap">
-            <section class="audio-visualizer">
-                <img src="workExamples/audio-visualizer/A-V-Square.png" class="projectPhoto" id="avPhoto"
-                    alt="audio-visualizer">
-            </section>
-            <section class="avisLabel project-label">
-                <p>Audio Visualizer <br> Mar. 2020 (original) <br> Sept. 2021 (new features)</p> <br>
-                <section class="projectLink">
-                    <a href="audioVisualizer.html">More info</a>
+            <section id = "fastestCarsWrap" class="project-square">
+                <section class = "fastest-cars">
+                    <img src = "workExamples/fastest-cars-project/car-list-top-square.png" class = "projectPhoto" id = "fcPhoto" alt = "fastestCarsProject">
                 </section>
-            </section>
-        </section>
-        <section id="csharpWrap">
-            <section class="csharp">
-                <img src="workExamples/20QCSharp/cSharpTitle.png" class="projectPhoto" id="cSharpPhoto"
-                    alt="cSharpProj">
-            </section>
-            <section class="csharpLabel project-label">
-                <p>20 Questions Console App (C#) <br> Nov. 2018</p> <br>
-                <section class="projectLink">
-                    <a href="20qCSharp.html">More info</a>
+                <section class="fastest-cars-label project-label">
+                    <p>Fastest Cars Responsive Dynamic Web App <br> Apr. 2021</p> <br>
+                    <section class="projectLink">
+                        <a href="fastest-cars.html">More info</a>
+                    </section>
                 </section>
             </section>
         </section>
@@ -87,6 +102,8 @@
         let csharpLabel = document.querySelector(".csharpLabel");
         let aVis = document.querySelector(".audio-visualizer");
         let aVisLabel = document.querySelector(".avisLabel");
+        let fc = document.querySelector(".fastest-cars");
+        let fcLabel = document.querySelector(".fastest-cars-label");
 
         //ES6 rules – you don't need to do a .querySelector() for ids!
 
@@ -123,6 +140,16 @@
         audioWrap.onmouseleave = () => {
             aVis.style.opacity = '1.0';
             aVisLabel.style.visibility = "hidden";
+        }
+
+        fastestCarsWrap.onmouseover = () => {
+            fc.style.opacity = 0.5;
+            fcLabel.style.visibility = "visible";
+        }
+
+        fastestCarsWrap.onmouseleave = () => {
+            fc.style.opacity = 1.0;
+            fcLabel.style.visibility = "hidden";
         }
     </script>
 </body>
