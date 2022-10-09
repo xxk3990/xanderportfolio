@@ -299,7 +299,8 @@ img.projectPhoto {
 
 /* view code and view project links for each project */
 .view-code-li,
-.view-project-li {
+.view-project-li, 
+.view-figma-li {
     /* I had to create a new column grid for the two links */
     font-size: 30px;
     list-style-type: none;
@@ -310,22 +311,26 @@ img.projectPhoto {
 }
 
 .view-project-li a:link,
-.view-code-li a:link {
+.view-code-li a:link,
+.view-figma-li a:link {
     color: orangered;
 }
 
 .view-project-li a:active,
-.view-code-li a:active {
+.view-code-li a:active,
+.view-figma-li a:active {
     color: red;
 }
 
 .view-project-li:hover,
-.view-code-li:hover {
+.view-code-li:hover,
+.view-figma-li:hover {
     transform: scale(1.1, 1.1);
 }
 
 .view-project-li a:visited,
-.view-code-li a:visited {
+.view-code-li a:visited,
+.view-figma-li a:visited {
     color: darkgoldenrod;
 }
 
