@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <nav>
-        <ul class = "nav-bar">
+        <ul class="nav-bar">
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="workExp.html">Work</a></li>
@@ -22,8 +24,9 @@
     </nav>
     <section id="work-container">
         <section class="work-title">
-            <h3><em>Paychex</em> Co-Op – Summer 2021</h3>
-            <h4>Note: Since this project was internal to the company, I sadly do not have any images of the app.</h4>
+            <h3><em>Paychex</em> Internship/Co-Op – Summer 2021</h3>
+            <h4>Note: Since this project was internal to the company (I implemented some Angular guards that required a
+                company login in order to view the app), I sadly do not have any images of the app.</h4>
         </section>
         <section class="project-details work-box">
             <h3>Project Details:</h3>
@@ -62,7 +65,8 @@
                 </li>
                 <li>Software + Languages Utilized
                     <ul class="sub-bullets">
-                        <li>Angular, TypeScript, Angular Material, Python Flask, HTML/CSS, Azure Cosmos DB, SQL, Azure DevOps</li>
+                        <li>Angular, TypeScript, Angular Material, Python Flask, HTML/CSS, SQL, Azure Cosmos DB, Azure
+                            DevOps</li>
                     </ul>
                 </li>
             </ul>
@@ -81,35 +85,40 @@
         <section class="challenges work-box">
             <h3>Challenges I Faced:</h3>
             <ul class="challenges-list work-list">
-                <li> I went into this co-op as a purely front-end developer with only some server side experience. The
-                    server
-                    side experience I had leading up to that point was only Node.js API handling and a little Java.
+                <li> I went into this internship solely as a front-end developer, as the only
+                    server side experience I had leading up to that point was Node.js and Java.
                     <ul class="sub-bullets">
-                        <li>For the first few weeks I tried to stay in a front-end role but a time came when I had to
-                            write some server side code in Python Flask (the back-end developers on our team were busy
-                            with other important tasks)</li>
-                        <li>Server side code took API call from front-end and either updated, created, or pulled data
-                            from Cosmos DB.</li>
-                        <li>It was very intimidating at first looking at a language I had never worked with before, so I
-                            decided to begin by going off what my teammates had done and using that to get a better hang
-                            of it.
-                            <ul class="sub-sub-bullets">
-                                <li>This worked perfectly – eventually by the end I was writing more advanced Flask
-                                    api-handling code to not just pull data from a database container but also to upsert
-                                    it (a fancy databasing word for update if something exists or insert if it doesn’t!)
-                                    and,
-                                    in one case, create the container via Flask, upsert data into it, and, for each new
-                                    POST request, check if the container existed and if it did add to the existing one
-                                    instead of creating a new duplicate one.
-                                </li>
-                            </ul>
+                        <li>For the first few weeks I was mainly in a front-end role.
+                            However, a few weeks in, I was working on an Angular form that would add new fields to
+                            certain policies in the database. The back-end developers on our team had full task-loads,
+                            so, in order to implement the feature, I had to quickly learn Python and Python Flask. </li>
+                        <li>
+                            It seemed very intimidating at first. I often use my knowledge of other coding languages as
+                            a starting point when learning new ones (and in the past my knowledge of C# helped me with
+                            writing Java), but Python has unique coding, formatting, and syntax requirements and doesn't
+                            allow a lot of what is required or permitted in the langauges I had learned in my major,
+                            JavaScript and C#, so I was unable to use a large portion of my prior coding, syntax, and
+                            formatting knowledge as a base. Facing these challenges head on made me really enjoy trying
+                            a new language and I found that I was ready for even more new challenges. I decided to start
+                            by studying the code my teammates wrote for the other database calls and used that to get a
+                            hang of things.
                         </li>
-                        <li>If I could do it over again, I’d make sure to not be as hesitant about writing back-end code
-                            – I thoroughly enjoyed working with Python Flask and am very grateful (one of a VERY LONG
-                            list of things I'm grateful to <em> Paychex</em> for!) to this company for helping me leave
-                            my areas of expertise to try new things. </li>
+                        <ul class="sub-sub-bullets">
+                            <li>This worked perfectly – eventually by the end I was writing more advanced Flask
+                                api-handling code to not just pull data from a database container but also to upsert
+                                it (a cool databasing term I learned on this job that means update if something exists
+                                or insert if it doesn’t!) and, in one case, create the container via Flask, upsert data
+                                into it, and, for each new POST request, check if the container existed and if it did
+                                add to the existing one instead of creating a new duplicate one.
+                            </li>
+                        </ul>
+                </li>
+                <li>If I could do it over again, I’d make sure to not be as hesitant about writing back-end code
+                    – I thoroughly enjoyed working with Python Flask and am very grateful (one of a VERY LONG
+                    list of things I'm grateful to <em> Paychex</em> for!) to this company for helping me leave
+                    my comfort zone to try new things. </li>
 
-                    </ul>
+            </ul>
 
             </ul>
         </section>
