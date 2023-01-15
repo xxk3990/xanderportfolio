@@ -381,6 +381,15 @@ body {
     grid-column-gap: 20px;
 }
 
+.company-name {
+    padding-bottom: 10px;
+}
+
+.job-info {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
 .work-button {
     cursor: pointer;
     border: 1px solid white;
@@ -399,7 +408,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 22px;
 }
 
