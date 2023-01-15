@@ -437,6 +437,10 @@ body {
     /* text-align: center; */
 }
 
+.job-details {
+    margin-top: 0;
+}
+
 #presentation-img {
     float: left;
 }
