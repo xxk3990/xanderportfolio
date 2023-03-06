@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Meteorites</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="workExp.html">Work</a></li>
+            <li><a href="resume.html">Résumé</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>React.js Meteorites Project</h1>
+    <section class="react-meteorites-wrapper">
+        <section class="meteoriteImages">
+            <img class="meteorite-image" alt='meteorite-project-main-view' src ="/workExamples/react-meteorites/react-meteorites-all.png">
+            <img class ="meteorite-image" alt="meteorite-project-search" src="/workExamples/react-meteorites/react-meteorites-search.png">
+            <img class ="meteorite-image" alt="meteorite-project-year-filter" src="/workExamples/react-meteorites/react-meteorites-year-filter.png">
+        </section>
+        <section id="react-meteorites-description" class="project-description">
+            <p>
+                From mid 2022 to early 2023, a friend and I joined forces and improved our knowledge of React.js to create a project using it. 
+                We decided to create a web app that displays NASA's meteorite data (from a public external JSON file they have) to the user. The data was requested using fetch().
+                The app is written in React's FSC format and utilizes the UseState, UseMemo, and UseEffect hooks. After looking at some tutorials, we were able to implement pagination so the data is spread
+                across multiple pages. Once pagination was working, we used Material UI's TextField element to create a search bar allowing the user to search for fallen meteorites. The user can also
+                filter the meteorites by spans of 99 years starting with 800-899 (the first meteorite was in the year 861). The default (show all) is 700, as the filtering triggers once the slider is above 800. 
+                The pagination adjusts based on the filters and shows the amount of results for each filter.
+                The mass value for the meteorites had all of them in grams, so we created a method to convert it to kilos and metric tons depending on the mass.
+                The location value in the original JSON was coordinates only, so we decided to try and reverse-geocode it and were able to utilize the Geoapify reverse geocoding API to get the city and country based on the coordinates. 
+                The entire site is also mobile friendly!
+
+            </p>
+        </section>
+        <ul id="react-meteorites-proj-links" class='project-links'>
+            <li class='view-project-li'><a target="_blank" href="https://master--react-meteorites.netlify.app/">View
+                    Project</a></li>
+            <li class='view-code-li'><a target="_blank" href="https://github.com/xxk3990/xander-michelle-react">View
+                    Code</a>
+            </li>
+        </ul>
+    </section>
+    <script>
+    </script>
+</body>
+
+</html>

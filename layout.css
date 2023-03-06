@@ -103,7 +103,8 @@ img.projectPhoto {
 #partyWrap,
 #genAWrap,
 #audioWrap,
-#fastestCarsWrap {
+#fastestCarsWrap,
+#reactMeteoritesWrap {
     /* giving them all equal size */
     max-width: 325px;
     height: 260px;
@@ -144,7 +145,10 @@ img.projectPhoto {
 
 /* below is the positioning for the text that appears when you hover */
 .partyLabel,
-.genALabel {
+.genALabel,
+.csharpLabel,
+.fastest-cars-label,
+.react-meteorites-label  {
     visibility: hidden;
     display: block;
     text-align: center;
@@ -154,15 +158,19 @@ img.projectPhoto {
     opacity: 1;
 }
 
-.csharpLabel,
-.avisLabel,
-.fastest-cars-label {
+.avisLabel {
     visibility: hidden;
     text-align: center;
-    transform: translate(5%, -200%);
+    transform: translate(5%, -150%);
     color: white;
     font-size: 22px;
     opacity: 1;
+}
+
+.project-title,
+.project-caption {
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .projectLink a {
@@ -281,11 +289,18 @@ img.projectPhoto {
     justify-content: center;
 }
 
-.carImages img {
+.meteoriteImages {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carImages img,
+.meteoriteImages img {
     max-width: 450px;
 }
 
-#fastest-cars-description {
+#fastest-cars-description,
+#react-meteorites-description {
     text-align: center;
 }
 
@@ -480,9 +495,9 @@ body {
     }
 
     img.projectPhoto {
-        max-width: 300px;
-        min-width: 300px;
-        height: 260px;
+        min-width: 340px;
+        max-width: 340px;
+        height: 270px;
     }
 
     .project-square {
@@ -657,6 +672,17 @@ body {
 
     #fastest-cars-description p {
         margin-top: 0;
+    }
+
+    .meteoriteImages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .meteorite-image {
+        width: 80vw;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
     .profiles {
