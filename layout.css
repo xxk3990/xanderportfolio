@@ -391,9 +391,8 @@ body {
 }
 
 #experience-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .company-name {
@@ -458,6 +457,16 @@ body {
 
 #presentation-img {
     float: left;
+}
+
+img.freelance-img {
+    max-width: 450px;
+    height: 300px;
+}
+
+.image-gallery-freelance {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* mobile queries down below */
@@ -706,6 +715,19 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    .work-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90vw;
+    }
+
+    .image-gallery-freelance {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 
 }
 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Web Developer</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="workExp.html">Work</a></li>
+            <li><a href="resume.html">Résumé</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="work-container">
+        <section class="work-title">
+            <h2><em>Freelance</em></h2>
+            <h3 class="job-details">Full Stack Engineer | Paid Job | August 2023 – present </h3>
+        </section>
+
+        <section class="project-details work-box">
+            <h3>Project Details:</h3>
+            <ul class="details-list work-list">
+                <li>I anm currently building a full-stack website for my personal trainer.
+                </li>
+                <li>The web app allows his clients to purchase exercise packages and apparel from him.
+                    <ul class="sub-bullets">
+                        <li>Shopping Cart, User Orders and Admin Products page complete so far.
+                        </li>
+                    </ul>
+                </li>
+                <li>Working with React.js, Node.js, PostgreSQL, and Sequelize.
+                    <ul class="sub-bullets">
+                        <li>Screenshot of an active shopping cart below the product catalog (left). The images of each
+                            product are random as this data is not from the prod version. The middle image is the same
+                            set of data as it appears in Postico. To avoid storing duplicate data in the DB, the product
+                            info – such as the name and image – are not stored in Order_Items but rather are grabbed
+                            from the Products table (using the product_uuid) and added to the data when its sent to the
+                            frontend. The product's original price is multiplied by the quantity of the order item to
+                            get the item price. The right image is the endpoint with the full cart JSON. <br>
+                            <section class="image-gallery-freelance">
+                                <img src="trainer-site-shopping-cart-img.png"
+                                    class="freelance-shopping-cart freelance-img">
+                                <img src="trainer-site-order-items-db.png"
+                                    class="freelance-shopping-cart-db freelance-img">
+                                <img src="trainer-site-order-items-endpoint.png"
+                                    class="freelance-shopping-cart-endpoint freelance-img">
+                            </section>
+                        </li>
+                    </ul>
+                </li>
+                <li>Timeline
+                    <ul class="sub-bullets">
+                        <li>I started working on this in August of this year. I began by doing research on fitness sites
+                            to see what others were doing. I then took what I found in my research and what my trainer
+                            told me he wanted and put them into a requirements document. Once he and I determined it was
+                            the highest priority, I began working on the shopping cart.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="team work-box">
+            <h3>Team:</h3>
+            <ul class="team-list work-list">
+                <li>The team is me solo. I have a collaborator but I only ask him to review and approve my Pull Requests
+                    on gitHub. All of the code I wrote and tested myself.
+                </li>
+            </ul>
+        </section>
+        <section class="challenges work-box">
+            <h3>Challenges I Face:</h3>
+            <ul class="challenges-list work-list">
+                <li> One of the challenges I faced early on was deciding how I was going to store and work with prices.
+                <li>After looking at a few online examples of the best conventions for how people store prices, I
+                    decided to go with them as integers throughout the site and then divide them by 100 only when
+                    displaying to the user.</li>
+                </li>
+                <li>This is one of the first experiences I've had where I set all the coding conventions myself, so I
+                    have to make sure I'm always doing it in the cleanest and easiest possible way.
+                    <ul class="sub-bullets">
+                        <li>At the beginning of the shopping cart implementation process, I was doing everything wrong
+                            but didn't know it. I was doing the adding/subtracting of the price calculations manually
+                            (rather than just multiplying the quantity by the unit price each time), storing prices in
+                            the database, and was doing some of the math on the front end, which it turned out was not
+                            the cleanest way to do it. At the beginning, my code looked incredibly complex like an
+                            anger-inducing error waiting to happen.
+                            After a few days of research on conventions, I found a cleaner way – moving all calculations
+                            to the backend, taking all prices (except for product price and order total) out of the db,
+                            and making the item_price and order_total only calculate at runtime, ensuring changes to the
+                            cart automatically update the order total. If I kept the item_price on the order_items
+                            model, I would need to manually update it each time. In the new way, all I have to do is
+                            have the quantity go up or down by 1 and the price will be adjusted automatically when its
+                            sent to the frontend.
+                        </li>
+                    </ul>
+            </ul>
+        </section>
+    </section>
+</body>
+
+</html>
