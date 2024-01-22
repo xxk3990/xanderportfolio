@@ -459,16 +459,6 @@ body {
     float: left;
 }
 
-img.freelance-img {
-    max-width: 450px;
-    height: 300px;
-}
-
-.image-gallery-freelance {
-    display: flex;
-    justify-content: space-evenly;
-}
-
 /* mobile queries down below */
 @media only screen and (min-width : 320px) and (max-width : 600px) {
 
@@ -720,11 +710,6 @@ img.freelance-img {
         display: grid;
         grid-template-columns: 1fr;
         width: 90vw;
-    }
-
-    .image-gallery-freelance {
-        display: flex;
-        flex-direction: column;
     }
 
 
