@@ -6,6 +6,7 @@
 
 h1 {
     text-align: center;
+    margin: 0;
 }
 
 .nav-bar {
@@ -39,26 +40,9 @@ h3 {
 
 
 .homePage {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 5em;
-}
-
-#aboutMe {
-    grid-column: 2/span 2;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#description {
-    font-size: 22px;
-    font-weight: normal;
-    text-align: center;
-}
-
-#projectPage {
-    text-align: center;
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projectWrapper {
@@ -66,9 +50,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
     margin-bottom: 3rem;
-    row-gap: 8rem;
 }
 
 #projectH1 {
@@ -110,12 +92,9 @@ img.projectPhoto {
 .project-title,
 .project-caption {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.project-caption {
-    color: lightgreen;
-}
 
 /* #cors-notice {
     text-align: center;
@@ -130,26 +109,6 @@ img.projectPhoto {
     margin-left: 30%;
 }
 
-.contact li {
-    color: white;
-    width: 70px;
-    height: 50px;
-    overflow: hidden;
-    padding: 14px 9px;
-    margin-bottom: 20px;
-}
-
-#resumeDesktop {
-    text-align: center;
-}
-
-.about {
-    font-size: 20px;
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 img {
     max-width: 300px;
 }
@@ -160,27 +119,22 @@ body {
 
 
 #experience-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
 }
 
 .job-info {
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
-    width: 85%;
 }
 
 .work-item {
-    border: 1px solid white;
-    width: 500px;
-    height: 175px;
+    width: 70vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: 10px;
-    background-color: black;
+    padding-left: 5px;
 }
 
 .work-title {
@@ -188,8 +142,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: lightgreen;
     font-size: 22px;
+    color: gold;
 }
 
 .job-details {
@@ -197,8 +151,7 @@ body {
 }
 
 .job-role {
-    font-size: 15px;
-    color: lightgreen;
+    font-size: 18px;
 }
 
 .project-links {
@@ -206,18 +159,15 @@ body {
     justify-content: space-evenly;
     font-size: 18px;
     text-align: center;
-    color: lightgreen;
 }
 
 .project-links a {
-    text-decoration: none;
-    margin-left: 5px;
-    margin-right: 5px;
-    color: lightgreen;
+    text-decoration: underline;
+    display: inline-block;
 }
 
 .project-links a:hover {
-    text-decoration: underline;
+   transform: scale(1.1, 1.1);
 }
 
 #work-container {
@@ -275,8 +225,9 @@ body {
     }
 
     .work-item {
-        max-width: 350px;
-        height: 225px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
     }
 
     #aboutMe {
