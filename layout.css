@@ -234,6 +234,10 @@ body {
         margin-left: 10%;
         margin-right: 10%;
     }
+
+    .job-role {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 320px) {
