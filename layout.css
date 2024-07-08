@@ -45,14 +45,6 @@ h3 {
     align-items: center;
 }
 
-.projectWrapper {
-    /* wrapper for projects section */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
 #projectH1 {
     text-align: center;
     padding-bottom: 20px;
@@ -73,26 +65,11 @@ img.projectPhoto {
     border: 1px solid white;
 }
 
-.genALabel,
-.fastest-cars-label,
-.react-meteorites-label  {
-    display: block;
-    text-align: center;
-    font-size: 18px;
-    opacity: 1;
-}
-
-.avisLabel {
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    opacity: 1;
-}
-
 .project-title,
 .project-caption {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 
@@ -119,8 +96,9 @@ body {
 
 
 #experience-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
 }
 
 .job-info {
@@ -128,25 +106,21 @@ body {
 }
 
 .work-item {
-    width: 70vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 10px;
     padding-left: 5px;
+    border: 1px solid white;
 }
 
 .work-title {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 22px;
     color: gold;
-}
-
-.job-details {
-    margin-top: 0;
 }
 
 .job-role {
@@ -158,6 +132,7 @@ body {
     justify-content: space-evenly;
     font-size: 18px;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .project-links a {
@@ -167,12 +142,6 @@ body {
 
 .project-links a:hover {
    transform: scale(1.1, 1.1);
-}
-
-#work-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #work-header {
@@ -210,23 +179,17 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .projectWrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     #experience-list {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 90vw;
     }
 
     .work-item {
         display: flex;
         flex-direction: column;
         align-items:center;
+        width: 90vw;
     }
 
     #aboutMe {
@@ -242,11 +205,6 @@ body {
 @media screen and (max-width: 320px) {
 
     /* less than or equal to iPhone 5/SE screen */
-    #projectWrapper {
-        grid-template-columns: 1fr;
-        align-content: center;
-        max-width: 100vw;
-    }
 
     .homePage {
         grid-template-columns: 1fr;
